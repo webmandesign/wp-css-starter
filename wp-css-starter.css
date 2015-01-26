@@ -27,7 +27,7 @@
 	 *
 	 * @copyright  2015 WebMan - Oliver Juhas
 	 * @license    GPL-2.0+, http://www.gnu.org/licenses/gpl-2.0.html
-	 * @version    0.9.5
+	 * @version    1.0
 	 *
 	 * @link  https://github.com/webmandesign/wp-css-starter
 	 * @link  http://www.webmandesign.eu
@@ -116,9 +116,10 @@
 				    word-wrap: break-word;
 			}
 			a:hover { text-decoration: underline; }
-			a:active {}
+			a:hover,
+			a:active { outline: 0; }
+			a:focus { outline: thin dotted; }
 			a:visited {}
-			a:focus { outline: 0; }
 
 			hr {
 				clear: both;
@@ -303,12 +304,12 @@
 					.screen-reader-text:focus {
 						background-color: #f1f1f1;
 						border-radius: 3px;
-						-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0, .6);
-						        box-shadow: 0 0 2px 2px rgba(0,0,0, .6);
+						box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 						clip: auto !important;
 						color: #21759b;
 						display: block;
 						font-size: 14px;
+						font-size: 0.875rem;
 						font-weight: bold;
 						height: auto;
 						left: 5px;
@@ -317,7 +318,7 @@
 						text-decoration: none;
 						top: 5px;
 						width: auto;
-						z-index: 100000; /* Above WP toolbar */
+						z-index: 100000; /* Above WP toolbar. */
 					}
 
 
@@ -940,9 +941,6 @@
 				vertical-align: baseline;
 			}
 
-			input[type="checkbox"],
-			input[type="radio"] { padding: 0; }
-
 			textarea,
 			select[multiple],
 			select[size] {
@@ -960,10 +958,6 @@
 			input[type="url"] { -webkit-appearance: none; }
 
 			input[type="search"] { box-sizing: border-box; }
-			input[type="search"]::-webkit-search-decoration {
-				/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-				-webkit-appearance: none;
-			}
 
 			:invalid { box-shadow: none; }
 
@@ -1702,6 +1696,11 @@
 		/**
 		 * Jetpack
 		 */
+
+			/* Responsive videos */
+
+				.jetpack-video-wrapper { margin: 1.62em 0; }
+				.entry-media .jetpack-video-wrapper { margin: 0; }
 
 			/* Contact form */
 
