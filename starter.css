@@ -1977,6 +1977,8 @@
 					border-top: 2px solid;
 				}
 
+					.site div#jp-relatedposts a:before { display: none; }
+
 					.site div#jp-relatedposts h3.jp-relatedposts-headline {
 						display: block;
 						float: none;
