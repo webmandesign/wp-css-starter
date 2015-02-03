@@ -1748,6 +1748,14 @@
 
 
 
+		/**
+		 * Comments special
+		 */
+
+			.bypostauthor {}
+
+
+
 
 
 	/**
@@ -1863,12 +1871,14 @@
 					font-size: 1em !important;
 					background-color: transparent;
 					color: inherit;
+					border: 1px solid;
 					z-index: 0;
 					-webkit-transition: all .3s;
 					        transition: all .3s;
 				}
 					.widget .tagcloud:hover a { opacity: .33; }
 					.widget .tagcloud a:hover {
+						text-decoration: none;
 						z-index: 1;
 						opacity: 1;
 					}
