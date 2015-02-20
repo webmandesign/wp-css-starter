@@ -1764,8 +1764,6 @@
 
 		.sidebar { float: right; }
 
-			.toggle-mobile-sidebar { display: none; }
-
 
 
 		/**
@@ -1809,7 +1807,6 @@
 			/* sidebar widgets */
 
 				.sidebar .widget { margin: 2.62em 0 0; }
-					.sidebar .toggle-mobile-sidebar + .widget,
 					.sidebar .widget:first-child { margin: 0; }
 
 
@@ -2147,19 +2144,9 @@
 						border-top: 2px solid;
 					}
 
-						.toggle-mobile-sidebar {
-							display: block;
-							width: 100%;
-							text-align: center;
-						}
-
 					/* Widgets */
 
-						.sidebar .widget,
-						.sidebar .toggle-mobile-sidebar + .widget {
-							margin-top: 2.62rem;
-							display: none;
-						}
+						.sidebar .widget { margin-top: 2.62rem; }
 
 			} /* /(max-width: 960px) */
 
