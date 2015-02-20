@@ -1430,12 +1430,6 @@
 						.format-quote blockquote:before,
 						.format-quote blockquote:after { display: none; }
 
-					.format-quote a,
-					.format-status a {
-						text-decoration: underline;
-						color: inherit;
-					}
-
 
 
 				/**
