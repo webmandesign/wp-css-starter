@@ -30,7 +30,7 @@
 	 *
 	 * @copyright  2015 WebMan - Oliver Juhas
 	 * @license    GPL-2.0+, http://www.gnu.org/licenses/gpl-2.0.html
-	 * @version    1.1
+	 * @version    1.2
 	 *
 	 * @link  https://github.com/webmandesign/wp-css-starter
 	 * @link  http://www.webmandesign.eu
@@ -1646,11 +1646,12 @@
 
 				.comment-list .pingback {
 					min-height: 0;
-					padding: 20px 0;
+					padding: .62em 0;
 					overflow: hidden;
 				}
 
 				.comment-body { padding: 1.62em; }
+				.pingback .comment-body { padding: 0; }
 
 
 
@@ -1919,11 +1920,6 @@
 		 * Jetpack
 		 */
 
-			/* Responsive videos */
-
-				.jetpack-video-wrapper { margin: 1.62em 0; }
-				.entry-media .jetpack-video-wrapper { margin: 0; }
-
 			/* Contact form */
 
 				.site .contact-form textarea { width: 100%; }
@@ -1934,6 +1930,8 @@
 				/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 				.infinity-end.neverending .site-footer { display: block; }
 
+				.infinite-scroll .posts.masonry { margin-bottom: 4.38rem; }
+
 				#infinite-handle {
 					clear: both;
 					text-align: center;
@@ -1941,10 +1939,10 @@
 				.masonry #infinite-handle {
 					position: absolute;
 					width: 100%;
-					bottom: -4.25rem;
+					bottom: -4.38rem;
 				}
 
-					body #infinite-handle span {
+					.site #infinite-handle span {
 						display: inline-block;
 						padding: 1em;
 						font-size: 1em;
@@ -1954,6 +1952,11 @@
 				.infinite-loader {
 					clear: both;
 					text-align: center;
+				}
+				.masonry .infinite-loader {
+					position: absolute;
+					width: 100%;
+					bottom: -4.38rem;
 				}
 					.infinite-loader .spinner {
 						left: auto !important;
@@ -1996,6 +1999,12 @@
 							margin: .62em 0 .38em;
 							font-size: 1em;
 						}
+
+			/* Responsive videos */
+
+				.jetpack-video-wrapper { margin: 1.62em 0; }
+				.entry-media .jetpack-video-wrapper,
+				.fl-video .jetpack-video-wrapper { margin: 0; }
 
 			/* Videopress */
 
