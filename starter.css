@@ -1,11 +1,11 @@
 /**
  * Starter CSS
  *
- * @package    ___THEME_NAME
+ * @package    {%= theme_name %}
  * @copyright  2015 WebMan - Oliver Juhas
  *
- * @since    ___SINCE
- * @version  ___VERSION
+ * @since    {%= version_since %}
+ * @version  {%= version %}
  */
 
 
