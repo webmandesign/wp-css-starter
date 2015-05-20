@@ -1,6 +1,11 @@
 /**
  * Starter CSS
  *
+ * Used development prefixes:
+ * - theme_name
+ * - version_since
+ * - version
+ *
  * @package    {%= theme_name %}
  * @copyright  2015 WebMan - Oliver Juhas
  *
