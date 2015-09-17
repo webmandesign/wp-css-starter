@@ -1,0 +1,23 @@
+.comment-content {
+	@extend .clearfix;
+
+	a {
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+	}
+
+	p,
+	blockquote,
+	table {
+		margin-bottom: 1em;
+	}
+
+}
+
+.comment {
+
+	.reply {
+		@extend %font_size_small;
+	}
+
+}

@@ -1,0 +1,162 @@
+/* Entry meta */
+
+%entry_meta_element_before {
+	content: '';
+	position: relative;
+	margin: -( $golden_minor / 4 +em ) ( $golden_minor / 4 +em ) 0 0;
+	font-size: $golden_minor + 1em;
+	vertical-align: middle;
+}
+
+.entry-meta {
+	padding: 1em 0 0;
+	margin: ( $golden +em ) 0 0;
+	border-top: 2px solid;
+
+	a {
+		color: inherit;
+	}
+
+	.single & {
+		margin-bottom: $golden +em;
+	}
+
+	&-top {
+		padding: 1em 0;
+		margin-top: 0;
+		border-bottom: 2px solid;
+	}
+
+	&-element {
+		margin-right: $golden_minor +em;
+		opacity: .5;
+
+		&::before {
+			@extend %entry_meta_element_before;
+		}
+
+		.single & {
+			margin-right: 1em;
+		}
+
+	}
+
+	.comments-link,
+	.entry-likes {
+
+		a {
+
+			&::before {
+				@extend %entry_meta_element_before;
+			}
+
+		}
+
+	}
+
+	.zilla-likes {
+
+		&,
+		&:hover,
+		&.active {
+			background: transparent;
+			margin: 0 !important;
+			padding-left: 0 !important;
+		}
+
+	}
+
+	.tags-links {
+
+		a {
+			margin: 0 ( $golden_minor / 2 +em );
+			text-transform: lowercase;
+
+			&::before {
+				content: '#';
+			}
+
+		}
+
+	}
+
+	.entry-edit {
+		font-variant: small-caps;
+	}
+
+}
+
+.entry-date {
+	cursor: help;
+}
+
+.comments-link {
+
+	.comments-title {
+		@extend %screen_reader_hiding;
+	}
+
+}
+
+// JetPack plugin support
+
+div.sharedaddy {
+	padding: ( $golden +em ) 0 0;
+	margin: ( $golden +em ) 0 0;
+	border-top: 2px solid;
+
+	.entry-content & {
+
+		h3.sd-title {
+
+			&::before {
+				display: none;
+			}
+
+		}
+
+	}
+
+	.entry-content & {
+
+		.sd-content {
+
+			ul {
+
+				li {
+
+					a.sd-button {
+						margin: ( $golden_minor / 2 +em ) ( $golden_major +em ) ( $golden_minor / 2 +em ) 0;
+
+						&:not(.no-text) {
+							padding: ( $golden_major +em ) 1em;
+							line-height: normal;
+							border: 0;
+							border-radius: 0;
+							cursor: pointer;
+							box-shadow: none;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.entry-content {
+
+	.sd-content {
+
+		ul {
+			margin: 0 !important;
+		}
+
+	}
+
+}

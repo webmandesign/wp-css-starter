@@ -1,0 +1,16 @@
+/**
+ * Breadcrumbs
+ */
+
+.breadcrumbs {
+
+	&-title {
+		margin-right: $golden +em;
+	}
+
+	.sep {
+		margin: 0 ( $golden_major +em );
+		opacity: .33;
+	}
+
+}

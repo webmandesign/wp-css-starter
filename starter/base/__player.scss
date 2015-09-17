@@ -1,0 +1,127 @@
+// MediaElement player custom styles
+
+// Wrapping within `.site` class to override WordPress default styles.
+
+.site {
+
+	.mejs-container {
+		min-height: 50px;
+		margin: ( $golden +em ) 0;
+
+		.mejs-controls {
+			height: 50px;
+			padding: 0 20px;
+			background: $color_mejs_bg;
+
+			div {
+				margin-top: 10px;
+			}
+
+			button {
+				box-shadow: none;
+			}
+
+			.mejs-time-rail {
+
+				.mejs-time-total {
+					background: darken( $color_mejs_bg, 6% );
+				}
+
+				.mejs-time-loaded {
+					height: 6px;
+					margin-top: 2px;
+					background: lighten( $color_mejs_bg, 6% );
+					border-radius: 0;
+				}
+
+				.mejs-time-current {
+					background: lighten( $color_mejs_bg, 4 * 6% );
+				}
+
+			}
+
+		}
+
+		video {
+			height: auto;
+		}
+
+	}
+
+	.wp-audio-playlist .mejs-container {
+		height: 50px !important;
+	}
+
+	.mejs-video {
+		width: 100% !important;
+	}
+
+	.mejs-overlay-button {
+		margin: -50px 0 0 -50px !important;
+	}
+
+	.wp-playlist {
+		padding: $golden +em;
+		margin: ( $golden +em ) 0;
+		background-color: invert( $color_mejs_bg );
+		border: 0;
+
+		.mejs-container {
+			width: 100% !important;
+		}
+
+		.wp-playlist-playing {
+			background: none;
+		}
+
+		&-tracks {
+			margin-top: 1em;
+		}
+
+		&-item {
+			padding: ( $golden_major +em ) 0;
+			border-color: darken( invert( $color_mejs_bg ), 6% );
+		}
+
+		&-item-length {
+			margin-top: $golden_major +em;
+		}
+
+		&-current-item {
+			margin-bottom: 1em;
+		}
+
+	}
+
+}
+
+.wp-video,
+.wp-video-playlist {
+
+	.mejs-controls {
+		visibility: hidden;
+	}
+
+	&:hover {
+
+		.mejs-controls {
+			visibility: visible;
+		}
+
+	}
+
+	.mejs-layer {
+		width: 100% !important;
+		height: 100% !important;
+	}
+
+}
+
+.entry-media {
+
+	.mejs-container,
+	.wp-playlist {
+		margin: 0;
+	}
+
+}

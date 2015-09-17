@@ -1,0 +1,110 @@
+/**
+ * Alignment
+ */
+
+.alignleft,
+.wp-caption.alignleft,
+img.alignleft {
+	float: left;
+	margin-right: $golden +em;
+	margin-bottom: $golden +em;
+}
+
+.alignright,
+.wp-caption.alignright,
+img.alignright {
+	float: right;
+	margin-left: $golden +em;
+	margin-bottom: $golden +em;
+}
+
+.aligncenter,
+.wp-caption.aligncenter,
+img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignnone,
+img.alignnone {
+	margin: 0;
+}
+
+/**
+ * Pullquotes
+ */
+
+%pullquote {
+	clear: none;
+	width: percentage( $golden_minor );
+	padding: 0;
+	margin-top: 0;
+	margin-left: 6%;
+	margin-right: 6%;
+	text-align: left;
+	padding: 0 6%;
+
+	&::after,
+	&::before {
+		width: 1px;
+		height: percentage( $golden_major );
+		left: auto; // reset the default blockquote style
+		top: percentage( $golden_minor / 2 );
+		border: 0;
+	}
+
+	&::after {
+		height: 6%;
+		top: 47%;
+		border: 0;
+	}
+
+}
+
+blockquote {
+
+	&.alignleft {
+		@extend %pullquote;
+		padding-left: 0;
+		margin-left: 0;
+		text-align: right;
+
+		&::after,
+		&::before {
+			right: 0;
+			border-right: 1px solid; // thin longer border
+		}
+
+		&::after {
+			border-right: ( $golden_minor / 2 +em ) solid; // thick short border
+		}
+
+		@include responsive( map_get( $breakpoint, 'xxl' ) ) {
+			margin-left: percentage( -$golden_minor / 4 );
+		}
+
+	}
+
+	&.alignright {
+		@extend %pullquote;
+		padding-right: 0;
+		margin-right: 0;
+
+		&::after,
+		&::before {
+			left: 0;
+			border-right: 1px solid; // thin longer border
+		}
+
+		&::after {
+			border-left: ( $golden_minor / 2 +em ) solid; // thick short border
+		}
+
+		@include responsive( map_get( $breakpoint, 'xxl' ) ) {
+			margin-right: percentage( -$golden_minor / 4 );
+		}
+
+	}
+
+}

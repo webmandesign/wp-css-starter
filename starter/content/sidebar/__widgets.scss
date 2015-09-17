@@ -1,0 +1,161 @@
+/**
+ * Calendar
+ */
+
+.widget_calendar {
+
+	caption {
+		@extend %font_style_normal;
+		@extend .weight-700;
+		text-align: center;
+		caption-side: top;
+	}
+
+	table {
+		margin: 0;
+	}
+
+	tr {
+
+		th,
+		td {
+			width: auto;
+			height: power( $golden, 2 ) +em;
+			padding: 0;
+			text-align: center;
+		}
+
+	}
+
+	tbody {
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: power( $golden, 2 );
+		}
+
+	}
+
+	tfoot {
+
+		a {
+			color: inherit;
+		}
+
+	}
+
+}
+
+/**
+ * Menu
+ */
+
+.widget .current-menu-item,
+.widget .current_page_item {
+
+	> a {
+		@extend .weight-700;
+	}
+
+}
+
+/**
+ * Recent Comments, Recent Posts and ZillaLikes widget
+ */
+
+ul {
+
+	li {
+
+		.widget_recent_comments &,
+		.widget_recent_entries &,
+		.widget_zilla_likes_widget & {
+			position: relative;
+			padding-left: $golden +em;
+		}
+
+	}
+
+}
+
+.widget_recent_entries {
+
+	.post-date {
+		display: block;
+	}
+
+}
+
+/**
+ * Tag cloud widget
+ */
+
+.tagcloud {
+	@extend %line_height_golden;
+
+	.widget & {
+
+		a {
+			float: left;
+			position: relative;
+			display: inline-block;
+			width: auto;
+			padding: ( $golden_minor / 2 +em ) ( $golden_major +em );
+			margin: 2px 2px 0 0;
+			white-space: nowrap;
+			font-size: 1em !important;
+			background-color: transparent;
+			color: inherit;
+			border: 1px solid;
+			z-index: 0;
+			transition: background .3s, color .3s, border .3s, opacity .3s;
+		}
+
+		&:hover {
+
+			a {
+				opacity: .33;
+			}
+
+		}
+
+		a {
+
+			&:hover {
+				text-decoration: none;
+				z-index: 1;
+				opacity: 1;
+
+				&::before {
+					display: block;
+				}
+
+			}
+
+			&::before {
+				content: attr(title);
+				position: absolute;
+				display: none;
+				left: 100%;
+				top: -1px;
+				padding: ( $golden_minor / 2 +em ) ( $golden_major +em );
+				pointer-events: none;
+				border: 1px solid;
+			}
+
+		}
+
+	}
+
+}
+
+/**
+ * Text widget
+ */
+
+.widget_text,
+.tagcloud {
+	@extend .clearfix;
+}

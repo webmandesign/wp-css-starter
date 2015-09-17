@@ -1,0 +1,24 @@
+table {
+	@extend %line_height_golden_minor;
+	width: 100%;
+	margin: 0 0 $golden*1em;
+	border: 2px solid;
+	border-collapse: collapse;
+}
+
+caption {
+	padding: 1em 0;
+}
+
+th,
+td {
+	padding: ( $golden_major +em ) 1em;
+	border: 1px solid;
+}
+
+th,
+tfoot td {
+	@extend .weight-700;
+	text-align: left;
+	border-width: 2px;
+}

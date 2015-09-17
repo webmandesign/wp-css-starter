@@ -1,0 +1,41 @@
+.comments-area {
+	position: relative;
+}
+
+.comments-title {
+	@extend %font_size_golden_minor;
+
+	.add-comment-link {
+		@extend %font_size_small;
+		@extend .weight-400;
+		display: block;
+		margin: 1em 0;
+
+		@include responsive( map_get( $breakpoint, 'l' ) ) {
+			float: right;
+			margin: 0;
+		}
+
+	}
+
+}
+
+.recentcomments {
+
+	a {
+		@extend %font_style_italic;
+	}
+
+}
+
+
+
+// Imports
+
+@import "_list";
+
+@import "_author";
+
+@import "_content";
+
+@import "_pagination";

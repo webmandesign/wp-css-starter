@@ -1,0 +1,67 @@
+// Imports
+
+/**
+ * # WordPress styles
+ */
+
+@import "wp/wp";
+
+/**
+ * # Forms
+ */
+
+@import "forms/forms";
+
+/**
+ * # Headings
+ */
+
+@import "headings/headings";
+
+/**
+ * # Site content
+ */
+
+// Content base styles
+
+.site-header,
+.site-content,
+.site-footer,
+.entry-content {
+	@extend .clearfix;
+}
+
+.entry-summary,
+.more-tag-excerpt {
+	margin: ( $golden +em ) 0;
+}
+
+.link-more {
+	@extend .weight-700;
+}
+
+@import "media/media";
+
+@import "formats/formats";
+
+@import "pagination/pagination";
+
+@import "meta/meta";
+
+/**
+ * # Comments
+ */
+
+@import "comments/comments";
+
+/**
+ * # Sidebar and widgets
+ */
+
+@import "sidebar/sidebar";
+
+/**
+ * # Plugins integration
+ */
+
+@import "plugins/plugins";

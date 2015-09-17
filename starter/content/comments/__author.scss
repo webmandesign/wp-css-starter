@@ -1,0 +1,43 @@
+.comment-meta {
+	@extend .overflow-hidden;
+	clear: both;
+	padding-bottom: $golden_major +em;
+	margin-bottom: 1em;
+	border-bottom: 2px solid;
+
+	.avatar {
+		position: absolute;
+		left: 0;
+		top: $golden +em;
+		width: 60*$px;
+		border-radius: 50%;
+
+		@include responsive( map_get( $breakpoint, 'm' ) ) {
+			width: 90*$px;
+		}
+
+	}
+
+}
+
+.comment-author {
+	float: left;
+}
+
+.comment-metadata {
+	@extend %font_size_small;
+	float: right;
+	opacity: .6;
+
+	.edit-link {
+		padding-left: $golden +em;
+		font-variant: small-caps;
+	}
+
+}
+
+.bypostauthor {
+	// The class is still required for Theme Check to pass.
+	// Need to include some placeholder within for SASS to process the class.
+	/* Placeholder only - WordPress required */
+}

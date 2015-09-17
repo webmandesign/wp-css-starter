@@ -1,0 +1,38 @@
+.comment-list {
+	padding: 0;
+	margin: 0 0 ( $golden +em );
+
+	.comments-closed + & {
+		margin-top: $golden +em;
+	}
+
+	> li,
+	.children > li {
+		@extend .overflow-hidden;
+		position: relative;
+		min-height: 100*$px;
+		padding: ( $golden +em ) 0 0 50*$px;
+		margin: 0;
+		background: none;
+
+		@include responsive( map_get( $breakpoint, 'm' ) ) {
+			padding-left: 80*$px;
+		}
+
+	}
+
+	.children {
+		clear: both;
+		margin: 0 0 0 -40*$px;
+
+		@include responsive( map_get( $breakpoint, 'm' ) ) {
+			margin-left: -60*$px;
+		}
+
+	}
+
+}
+
+.comment-body {
+	padding: $golden +em;
+}

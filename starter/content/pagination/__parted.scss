@@ -1,0 +1,54 @@
+/* Posts parts (post table of contents) */
+
+.post-table-of-contents {
+	padding: ( $golden +em ) 0 0;
+	margin: ( $golden +em ) 0;
+	border-top: 2px solid;
+
+	&.top {
+		display: none;
+	}
+
+	&.bottom {
+		clear: both;
+	}
+
+	ol {
+		margin: 0;
+		list-style: none;
+	}
+
+	li {
+		padding: ( $golden_minor / 2 +em ) 0;
+	}
+
+	a {
+		display: block;
+		line-height: 1.38;
+	}
+
+	.current,
+	.passed {
+
+		a {
+			color: inherit;
+		}
+
+	}
+
+	@include responsive( map_get( $breakpoint, 'm' ) ) {
+
+		&.top {
+			float: left;
+			display: block;
+			max-width: percentage( $golden_minor );
+			padding: 0 1em 1em 0;
+			margin: 0 ( $golden +em ) 1em 0;
+			border: 0;
+			border-right: 2px solid;
+			border-bottom: 2px solid;
+		}
+
+	}
+
+}

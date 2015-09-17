@@ -1,0 +1,51 @@
+.pagination {
+	clear: both;
+
+	a,
+	span {
+		$margin: $golden_minor / 2 +em;
+
+		display: none;
+		width: power( $golden, 2 ) +em;
+		padding: ( $golden_major +em ) 0;
+		margin: $margin $margin $margin 0;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	a {
+		opacity: .5;
+	}
+
+	> span,
+	a:active,
+	a:hover,
+	.current {
+		opacity: 1;
+	}
+
+	.prev,
+	.next {
+		display: inline-block;
+		opacity: 1;
+	}
+
+	> span.dots,
+	.extend {
+		width: auto;
+	}
+
+	.current {
+		@extend .weight-700;
+	}
+
+	@include responsive( map_get( $breakpoint, 'm' ) ) {
+
+		a,
+		span {
+			display: inline-block;
+		}
+
+	}
+
+}
