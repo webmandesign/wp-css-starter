@@ -145,7 +145,7 @@
 
 	@each $with in $withs {
 
-		@at-root #{ selector_replace( &, $replace, $with ) } {
+		@at-root #{ selector_replace( #{&}, $replace, $with ) } {
 			@content;
 		}
 
