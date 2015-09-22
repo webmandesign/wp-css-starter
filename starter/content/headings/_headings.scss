@@ -1,17 +1,3 @@
-@include h_tags( $golden_major, true ); // heading default styles (on small devices)
-
-@include responsive( map_get( $breakpoint, 'm' ) ) {
-
-	@include h_tags( $golden_major + $golden_minor / 2 );
-
-}
-
-@include responsive( map_get( $breakpoint, 'l' ) ) {
-
-	@include h_tags();
-
-}
-
 .widget-title {
 	margin: 0 0 ( $golden +em );
 }
