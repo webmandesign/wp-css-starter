@@ -148,6 +148,7 @@ div#jp-relatedposts {
 		div.jp-relatedposts-items {
 
 			.jp-relatedposts-post {
+				width: 100%;
 				padding: 0;
 				margin: ( $golden +em ) 0 0 0;
 				opacity: 1;
@@ -157,7 +158,13 @@ div#jp-relatedposts {
 				}
 
 				img {
+					display: none;
 					width: 100%;
+
+					@include responsive( map_get( $breakpoint, 'm' ) ) {
+						display: block;
+					}
+
 				}
 
 				@include responsive( map_get( $breakpoint, 'm' ) ) {
