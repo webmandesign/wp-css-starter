@@ -113,7 +113,9 @@ ul {
 			transition: background .3s, color .3s, border .3s, opacity .3s;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus,
+		&:active {
 
 			a {
 				opacity: .33;
@@ -123,7 +125,9 @@ ul {
 
 		a {
 
-			&:hover {
+			&:hover,
+			&:focus,
+			&:active {
 				text-decoration: none;
 				z-index: 1;
 				opacity: 1;
