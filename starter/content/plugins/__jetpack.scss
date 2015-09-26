@@ -255,6 +255,35 @@ div#jp-relatedposts {
 
 /* Widgets */
 
+// Blog Subscriptions
+
+.jetpack_subscription_widget {
+
+	form {
+		@extend .overflow-hidden;
+	}
+
+	#subscribe-email {
+		float: left;
+		width: percentage( $golden_major );
+		padding-right: $golden_major +rem;
+
+		input {
+			width: 100%;
+			padding: $golden_major +em;
+		}
+
+	}
+
+	#subscribe-submit {
+		float: right;
+		width: percentage( $golden_minor );
+	}
+
+}
+
+// Top Posts & Pages
+
 .widgets-list-layout {
 
 	.widget & {
