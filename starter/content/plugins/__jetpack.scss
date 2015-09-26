@@ -260,13 +260,15 @@ div#jp-relatedposts {
 .jetpack_subscription_widget {
 
 	form {
-		@extend .overflow-hidden;
+		@extend .clearfix;
+		margin-bottom: 0;
 	}
 
 	#subscribe-email {
 		float: left;
 		width: percentage( $golden_major );
 		padding-right: $golden_major +em;
+		margin-bottom: 0;
 
 		input {
 			width: 100%;
@@ -278,6 +280,7 @@ div#jp-relatedposts {
 	#subscribe-submit {
 		float: right;
 		width: percentage( $golden_minor );
+		margin-bottom: 0;
 	}
 
 }
