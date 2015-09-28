@@ -5,12 +5,21 @@
 .breadcrumbs {
 
 	&-title {
-		margin-right: $golden +em;
+		margin-right: $golden_major +em;
+
+		@include responsive( map_get( $breakpoint, 'm' ) ) {
+			margin-right: $golden +em;
+		}
+
 	}
 
 	.sep {
-		margin: 0 ( $golden_major +em );
-		opacity: .33;
+		opacity: .5;
+
+		@include responsive( map_get( $breakpoint, 'm' ) ) {
+			margin: 0 ( $golden_major +em );
+		}
+
 	}
 
 }
