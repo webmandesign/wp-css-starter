@@ -40,11 +40,7 @@ caption {
 	line-height: normal;
 }
 
-img,
-embed,
-iframe,
-object,
-video {
+img {
 	max-width: 100%;
 }
 
@@ -52,7 +48,8 @@ embed,
 iframe,
 object,
 video {
-	width: 100% !important;
+	width: 100%;
+	max-width: 100%;
 }
 
 // From Bootstrap 4 Reboot:
