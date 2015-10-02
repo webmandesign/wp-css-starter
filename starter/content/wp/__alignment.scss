@@ -6,16 +6,16 @@
 .wp-caption.alignleft,
 img.alignleft {
 	float: left;
-	margin-right: $golden +em;
-	margin-bottom: $golden +em;
+	margin-right: 1em;
+	margin-bottom: 1em;
 }
 
 .alignright,
 .wp-caption.alignright,
 img.alignright {
 	float: right;
-	margin-left: $golden +em;
-	margin-bottom: $golden +em;
+	margin-left: 1em;
+	margin-bottom: 1em;
 }
 
 .aligncenter,
