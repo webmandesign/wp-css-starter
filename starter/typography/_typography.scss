@@ -1,7 +1,12 @@
 html {
 	@extend %line_height_golden;
-	font-size: percentage( $font_size / 16 );
+	font-size: 100%;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+	@include responsive( map_get( $breakpoint, 's' ) ) {
+		font-size: percentage( $font_size / 16 );
+	}
+
 }
 
 pre,
