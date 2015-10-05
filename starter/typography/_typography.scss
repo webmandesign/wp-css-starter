@@ -136,8 +136,10 @@ address {
 // 700 = bold
 //
 // @link  https://developer.mozilla.org/en/docs/Web/CSS/font-weight
+//
+// Reversing order for easier overriding.
 
-@for $i from 1 through 8 {
+@for $i from 8 through 1 {
 
 	$weight: $i * 100;
 
