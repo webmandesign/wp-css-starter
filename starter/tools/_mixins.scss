@@ -120,7 +120,8 @@
 			overflow-wrap: break-word;
 			text-rendering: optimizeLegibility; // https://developer.mozilla.org/en-US/docs/CSS/text-rendering
 
-			&:first-child {
+			&:first-child,
+			.screen-reader-text + & {
 				margin-top: 0;
 			}
 
