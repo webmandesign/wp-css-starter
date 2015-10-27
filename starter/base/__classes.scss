@@ -3,6 +3,7 @@
 	position: absolute !important;
 	height: 1px;
 	width: 1px;
+	line-height: 1px;
 	overflow: hidden;
 }
 
@@ -11,6 +12,7 @@
 	position: static !important;
 	height: auto;
 	width: auto;
+	line-height: normal;
 	overflow: visible;
 }
 
