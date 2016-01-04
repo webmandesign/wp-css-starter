@@ -43,6 +43,16 @@
 
 }
 
+	.focus-position-static {
+
+		&:hover,
+		&:active,
+		&:focus {
+			position: static !important;
+		}
+
+	}
+
 	// Do not show the outline on the skip link target
 
 	#content[tabindex="-1"]:focus {
