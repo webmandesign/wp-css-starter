@@ -16,7 +16,7 @@
 
 		.posts & {
 
-			.post-excerpt {
+			.entry-summary {
 				@extend %font_size_golden_minor;
 				@extend %no_margin;
 			}
