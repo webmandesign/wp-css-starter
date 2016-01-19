@@ -31,9 +31,8 @@
 	@extend .clearfix;
 }
 
-.entry-summary,
-.more-tag-excerpt {
-	margin: ( $golden +em ) 0;
+.entry-summary {
+	margin: 0 0 ( $golden +em );
 }
 
 .link-more {

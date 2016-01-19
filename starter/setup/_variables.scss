@@ -45,47 +45,47 @@ $h_tags: $h_tags_1, $h_tags_2, $h_tags_3, $h_tags_4, $h_tags_5, $h_tags_6;
 $h_tags_setup: (
 
 	// $selector : (
-	//   $size,
-	//   $line_height,
-	//   $margin_top,
-	//   $margin_bottom
+	//   $size
+	//   $line_height
+	//   $margin_top    [ ( span_4_or_3_lines - $size * $line_height - $margin_bottom ) / $size ]
+	//   $margin_bottom [ $margin_bottom / $size / $line_height ]
 	// )
 
 	$h_tags_1 : (
 			power( 1 + $golden_minor, 4 ),
-			1 - $golden_minor / 4,
-			$golden_minor,
-			$golden_minor
+			1 + $golden_minor / 2,
+			( 4 * $golden - power( 1 + $golden_minor, 4 ) * ( 1 + $golden_minor / 2 ) - $golden ) / power( 1 + $golden_minor, 4 ),
+			$golden / power( 1 + $golden_minor, 4 ) / ( 1 + $golden_minor / 2 )
 		),
 	$h_tags_2 : (
 			power( ( 1 + $golden_minor ), 3 ),
-			1,
-			$golden_minor,
-			$golden_minor
+			1 + $golden_minor / 2,
+			( 4 * $golden - power( ( 1 + $golden_minor ), 3 ) * ( 1 + $golden_minor / 2 ) - $golden ) / power( ( 1 + $golden_minor ), 3 ),
+			$golden / power( ( 1 + $golden_minor ), 3 ) / ( 1 + $golden_minor / 2 )
 		),
 	$h_tags_3 : (
 			power( ( 1 + $golden_minor ), 2 ),
-			1 + $golden_minor / 4,
-			$golden_major,
-			$golden_major
+			1 + $golden_minor,
+			( 4 * $golden - power( ( 1 + $golden_minor ), 2 ) * ( 1 + $golden_minor ) - $golden ) / power( ( 1 + $golden_minor ), 2 ),
+			$golden / power( ( 1 + $golden_minor ), 2 ) / ( 1 + $golden_minor )
 		),
 	$h_tags_4 : (
 			$golden,
-			1 + $golden_minor / 2,
-			$golden_major,
-			$golden_major
+			1 + $golden_minor,
+			( 3 * $golden - $golden * ( 1 + $golden_minor ) - $golden ) / $golden,
+			$golden / $golden / ( 1 + $golden_minor )
 		),
 	$h_tags_5 : (
 			1 + $golden_minor,
-			1 + $golden_minor / 2,
-			1,
-			1
+			$golden,
+			( 3 * $golden - ( 1 + $golden_minor ) * $golden - $golden ) / ( 1 + $golden_minor ),
+			$golden / ( 1 + $golden_minor ) / $golden
 		),
 	$h_tags_6 : (
 			1 + $golden_minor,
-			1 + $golden_minor / 2,
-			1,
-			1
+			$golden,
+			( 3 * $golden - ( 1 + $golden_minor ) * $golden - $golden ) / ( 1 + $golden_minor ),
+			$golden / ( 1 + $golden_minor ) / $golden
 		)
 
 ) !default;
