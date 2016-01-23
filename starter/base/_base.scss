@@ -1,227 +1,237 @@
-a {
-	text-decoration: none;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
+/* FILE: starter/base/_base.scss */
 
-	&:hover {
-		text-decoration: underline;
+//
+// Basic, generic styles
+//
+
+
+
+
+
+// HTML elements
+
+	a {
+		text-decoration: none;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&:focus {
+			outline: thin dashed;
+		}
+
+		&:visited {}
+
 	}
 
-	&:focus {
-		outline: thin dashed;
+	hr {
+		clear: both;
+		height: 2px;
+		margin: ( power( 1 + $golden_minor, 2 ) +rem ) 0; // 1.909 0
+		border: 0;
 	}
 
-	&:visited {}
-
-}
-
-hr {
-	clear: both;
-	height: 2px;
-	margin: ( power( 1 + $golden_minor, 2 ) +rem ) 0; // 1.909 0
-	border: 0;
-}
-
-abbr[title],
-acronym[title] {
-	cursor: help;
-}
-
-blockquote {
-	@extend %font_size_golden_minor;
-	@extend .weight-300;
-	@extend %line_height_golden_minor;
-	clear: both;
-	position: relative;
-	padding: 1em 0;
-	margin: ( $golden +em ) 0;
-	text-align: center;
-
-	&::after,
-	&::before {
-		content: '';
-		display: block;
-		position: absolute;
-		width: percentage( $golden_minor );
-		height: 100%;
-		left: percentage( $golden_major / 2 );
-		top: 0;
-		pointer-events: none;
-		border-top: 1px solid; // thin longer border
-		border-bottom: 1px solid; // thin longer border
-	}
-
-	&::after {
-		width: 2%;
-		left: 49%;
-		border-top: ( $golden_minor / 2 +em ) solid; // thick short border
-		border-bottom: ( $golden_minor / 2 +em ) solid; // thick short border
-	}
-
-	p {
-		margin-bottom: 1em;
-	}
-
-	p:last-child {
-		margin: 0;
+	abbr[title],
+	acronym[title] {
+		cursor: help;
 	}
 
 	blockquote {
-		@extend %font_size_1em;
+		@extend %font_size_golden_minor;
+		@extend .weight-300;
+		@extend %line_height_golden_minor;
+		clear: both;
+		position: relative;
+		padding: 1em 0;
+		margin: ( $golden +em ) 0;
+		text-align: center;
+
+		&::after,
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: percentage( $golden_minor );
+			height: 100%;
+			left: percentage( $golden_major / 2 );
+			top: 0;
+			pointer-events: none;
+			border-top: 1px solid; // thin longer border
+			border-bottom: 1px solid; // thin longer border
+		}
+
+		&::after {
+			width: 2%;
+			left: 49%;
+			border-top: ( $golden_minor / 2 +em ) solid; // thick short border
+			border-bottom: ( $golden_minor / 2 +em ) solid; // thick short border
+		}
+
+		p {
+			margin-bottom: 1em;
+		}
+
+		p:last-child {
+			margin: 0;
+		}
+
+		blockquote {
+			@extend %font_size_1em;
+		}
+
 	}
 
-}
+	cite {
+		@extend %font_style_normal;
+		border: 0;
 
-cite {
-	@extend %font_style_normal;
-	border: 0;
+		&::before {
+			content: '\2014\2002';
+		}
 
-	&::before {
-		content: '\2014\2002';
+		blockquote & {
+			@extend %font_size_small;
+			@extend .weight-400;
+			display: block;
+			margin-top: $golden_major +em;
+		}
+
 	}
 
-	blockquote & {
-		@extend %font_size_small;
-		@extend .weight-400;
-		display: block;
-		margin-top: $golden_major +em;
+	q {
+
+		&::before {
+			content: '\201C';
+		}
+
+		&::after {
+			content: '\201D';
+		}
+
 	}
 
-}
-
-q {
-
-	&::before {
-		content: '\201C';
+	mark,
+	ins,
+	.highlight {
+		padding: ( $golden_minor / 2 +em ) 0;
+		margin: 0 ( $golden_minor +em );
+		box-decoration-break: clone;
 	}
 
-	&::after {
-		content: '\201D';
-	}
-
-}
-
-mark,
-ins,
-.highlight {
-	padding: ( $golden_minor / 2 +em ) 0;
-	margin: 0 ( $golden_minor +em );
-	box-decoration-break: clone;
-}
-
-s,
-del {
-	text-decoration: line-through;
-	color: inherit;
-	opacity: .5;
-}
-
-img,
-iframe {
-	vertical-align: middle;
-}
-
-img[width],
-img[height] {
-	height: auto;
-}
-
-iframe {
-	border: 0;
-	outline: 0;
-
-	&:focus {
-		outline: thin dotted;
-	}
-
-}
-
-code {
-	@extend %font_size_small;
-	position: relative;
-	display: inline-block;
-	padding: 0 ( $golden_major +em );
-	margin: 0 ( $golden_minor / 2 +em );
-
-	mark &,
-	ins &,
-	.highlight &,
-	.form-allowed-tags &,
-	.taxonomy-description & {
-		display: inline;
-		padding: 0 ( $golden_minor +em );
-		background: none;
+	s,
+	del {
+		text-decoration: line-through;
 		color: inherit;
+		opacity: .5;
 	}
 
-}
-
-pre {
-	@extend %font_size_small;
-	position: relative;
-	max-width: 100%;
-	padding: 1em;
-	margin-bottom: $golden +em;
-	overflow: auto;
-	tab-size: 2;
-}
-
-small,
-.small {
-	@extend %font_size_small;
-}
-
-ul, ol {
-	margin: 0 ( $golden +em ) 1em ( $golden_minor + 1em );
-
-	li > & {
-		margin-bottom: 0;
+	img,
+	iframe {
+		vertical-align: middle;
 	}
 
-}
+	img[width],
+	img[height] {
+		height: auto;
+	}
 
-ol {
+	iframe {
+		border: 0;
+		outline: 0;
+
+		&:focus {
+			outline: thin dotted;
+		}
+
+	}
+
+	code {
+		@extend %font_size_small;
+		position: relative;
+		display: inline-block;
+		padding: 0 ( $golden_major +em );
+		margin: 0 ( $golden_minor / 2 +em );
+
+		mark &,
+		ins &,
+		.highlight &,
+		.form-allowed-tags &,
+		.taxonomy-description & {
+			display: inline;
+			padding: 0 ( $golden_minor +em );
+			background: none;
+			color: inherit;
+		}
+
+	}
+
+	pre {
+		@extend %font_size_small;
+		position: relative;
+		max-width: 100%;
+		padding: 1em;
+		margin-bottom: $golden +em;
+		overflow: auto;
+		tab-size: 2;
+	}
+
+	small,
+	.small {
+		@extend %font_size_small;
+	}
+
+	ul, ol {
+		margin: 0 ( $golden +em ) 1em ( $golden_minor + 1em );
+
+		li > & {
+			margin-bottom: 0;
+		}
+
+	}
 
 	ol {
-		list-style: upper-alpha;
 
 		ol {
-			list-style: upper-roman;
+			list-style: upper-alpha;
 
 			ol {
-				list-style: lower-alpha;
+				list-style: upper-roman;
+
+				ol {
+					list-style: lower-alpha;
+				}
+
 			}
 
 		}
 
 	}
 
-}
+	dl {
+		margin-bottom: $golden +em;
+	}
 
-dl {
-	margin-bottom: $golden +em;
-}
+	dt {
+		@extend .weight-700;
+	}
 
-dt {
-	@extend .weight-700;
-}
-
-dd {
-	margin-left: $golden +em;
-}
+	dd {
+		margin-left: $golden +em;
+	}
 
 
 
 // Imports
 
-@import "_table";
+	@import "_table";
 
-@import "_classes";
+	@import "_classes";
 
-@import "_clearing";
+	@import "_clearing";
 
-@import "_pagination";
+	@import "_player";
 
-@import "_player";
-
-@import "_breakpoints";
+	@import "_breakpoints";

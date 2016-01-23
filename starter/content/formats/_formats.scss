@@ -1,131 +1,131 @@
+/* FILE: starter/formats/_formats.scss */
+
+//
 // Post formats
+//
+
+
+
+
 
 %no_margin {
 	margin: 0;
 }
 
+
+
 // Image
 
-@if ( null != index( $supported_post_formats, 'image' ) ) {
+	@if ( null != index( $supported_post_formats, 'image' ) ) {
 
-	/**
-	 * Post format: Image
-	 */
+		.format-image {
 
-	.format-image {
+			.posts & {
 
-		.posts & {
+				.entry-summary {
+					@extend %font_size_golden_minor;
+					@extend %no_margin;
+				}
 
-			.entry-summary {
-				@extend %font_size_golden_minor;
-				@extend %no_margin;
-			}
+				.link-more {
+					display: none;
+				}
 
-			.link-more {
-				display: none;
 			}
 
 		}
 
 	}
 
-}
+
 
 // Link
 
-@if ( null != index( $supported_post_formats, 'link' ) ) {
+	@if ( null != index( $supported_post_formats, 'link' ) ) {
 
-	/**
-	 * Post format: Link
-	 */
+		.format-link {
 
-	.format-link {
+			.entry-content {
+				@extend %font_size_golden_minor;
+				@extend %line_height_golden_minor;
 
-		.entry-content {
-			@extend %font_size_golden_minor;
-			@extend %line_height_golden_minor;
+				a {
+					@extend .weight-700;
+				}
 
-			a {
-				@extend .weight-700;
 			}
 
-		}
+			.posts & {
 
-		.posts & {
+				p {
+					@extend %no_margin;
+				}
 
-			p {
-				@extend %no_margin;
 			}
 
 		}
 
 	}
 
-}
+
 
 // Quote
 
-@if ( null != index( $supported_post_formats, 'quote' ) ) {
+	@if ( null != index( $supported_post_formats, 'quote' ) ) {
 
-	/**
-	 * Post format: Quote
-	 */
+		.format-quote {
 
-	.format-quote {
+			blockquote {
+				padding: 0;
+				margin-top: 0;
+				text-align: inherit;
 
-		blockquote {
-			padding: 0;
-			margin-top: 0;
-			text-align: inherit;
+				&::after,
+				&::before {
+					display: none;
+				}
 
-			&::after,
-			&::before {
-				display: none;
 			}
 
-		}
+			.entry-content {
 
-		.entry-content {
+				a {
+					@extend .weight-700;
+				}
 
-			a {
-				@extend .weight-700;
 			}
 
 		}
 
 	}
 
-}
+
 
 // Status
 
-@if ( null != index( $supported_post_formats, 'status' ) ) {
+	@if ( null != index( $supported_post_formats, 'status' ) ) {
 
-	/**
-	 * Post format: Status
-	 */
+		.format-status {
+			cursor: help;
 
-	.format-status {
-		cursor: help;
+			.entry-content {
+				@extend %font_size_golden_minor;
+				@extend %line_height_golden;
 
-		.entry-content {
-			@extend %font_size_golden_minor;
-			@extend %line_height_golden;
+				a {
+					@extend .weight-700;
+				}
 
-			a {
-				@extend .weight-700;
 			}
 
-		}
+			.posts & {
 
-		.posts & {
+				p {
+					@extend %no_margin;
+				}
 
-			p {
-				@extend %no_margin;
 			}
 
 		}
 
 	}
-
-}

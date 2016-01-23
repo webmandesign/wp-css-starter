@@ -1,8 +1,14 @@
-// MediaElement player custom styles
+/* FILE: starter/base/__player.scss */
 
-// Wrapping within `.site` class to override WordPress default styles.
+//
+// WordPress media player (MediaELement) custom styles
+//
 
-.site {
+
+
+
+
+.site { // Wrapping within `.site` class to override WordPress default styles.
 
 	.mejs-container {
 		min-height: 50px;

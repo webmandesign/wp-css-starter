@@ -1,114 +1,122 @@
-/**
- * Alignment
- */
+/* FILE: starter/wp/__alignment.scss */
 
-.alignleft,
-.wp-caption.alignleft,
-img.alignleft {
-	float: left;
-	margin-right: 1em;
-	margin-bottom: 1em;
-}
+//
+// Alignments
+//
 
-.alignright,
-.wp-caption.alignright,
-img.alignright {
-	float: right;
-	margin-left: 1em;
-	margin-bottom: 1em;
-}
 
-.aligncenter,
-.wp-caption.aligncenter,
-img.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
 
-.alignnone,
-img.alignnone {
-	margin: 0;
-}
 
-/**
- * Pullquotes
- */
 
-%pullquote {
-	clear: none;
-	width: 50%;
-	padding: 0;
-	margin-top: 0;
-	margin-left: 6%;
-	margin-right: 6%;
-	text-align: left;
-	padding: 0 6%;
+// Basic alignments
 
-	@include responsive( map_get( $breakpoint, 's' ) ) {
-		width: percentage( $golden_minor );
+	.alignleft,
+	.wp-caption.alignleft,
+	img.alignleft {
+		float: left;
+		margin-right: 1em;
+		margin-bottom: 1em;
 	}
 
-	&::after,
-	&::before {
-		width: 1px;
-		height: percentage( $golden_major );
-		left: auto; // reset the default blockquote style
-		top: percentage( $golden_minor / 2 );
-		border: 0;
+	.alignright,
+	.wp-caption.alignright,
+	img.alignright {
+		float: right;
+		margin-left: 1em;
+		margin-bottom: 1em;
 	}
 
-	&::after {
-		height: 6%;
-		top: 47%;
-		border: 0;
+	.aligncenter,
+	.wp-caption.aligncenter,
+	img.aligncenter {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-}
+	.alignnone,
+	img.alignnone {
+		margin: 0;
+	}
 
-blockquote {
 
-	&.alignleft {
-		@extend %pullquote;
-		padding-left: 0;
-		margin-left: 0;
-		text-align: right;
+
+// Pullquotes
+
+	%pullquote {
+		clear: none;
+		width: 50%;
+		padding: 0;
+		margin-top: 0;
+		margin-left: 6%;
+		margin-right: 6%;
+		text-align: left;
+		padding: 0 6%;
+
+		@include responsive( map_get( $breakpoint, 's' ) ) {
+			width: percentage( $golden_minor );
+		}
 
 		&::after,
 		&::before {
-			right: 0;
-			border-right: 1px solid; // thin longer border
+			width: 1px;
+			height: percentage( $golden_major );
+			left: auto; // reset the default blockquote style
+			top: percentage( $golden_minor / 2 );
+			border: 0;
 		}
 
 		&::after {
-			border-right: ( $golden_minor / 2 +em ) solid; // thick short border
-		}
-
-		@include responsive( map_get( $breakpoint, 'xxl' ) ) {
-			margin-left: percentage( -$golden_minor / 4 );
+			height: 6%;
+			top: 47%;
+			border: 0;
 		}
 
 	}
 
-	&.alignright {
-		@extend %pullquote;
-		padding-right: 0;
-		margin-right: 0;
+	blockquote {
 
-		&::after,
-		&::before {
-			left: 0;
-			border-right: 1px solid; // thin longer border
+		&.alignleft {
+			@extend %pullquote;
+			padding-left: 0;
+			margin-left: 0;
+			text-align: right;
+
+			&::after,
+			&::before {
+				right: 0;
+				border-right: 1px solid; // thin longer border
+			}
+
+			&::after {
+				border-right: ( $golden_minor / 2 +em ) solid; // thick short border
+			}
+
+			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
+				margin-left: percentage( -$golden_minor / 4 );
+			}
+
 		}
 
-		&::after {
-			border-left: ( $golden_minor / 2 +em ) solid; // thick short border
-		}
+		&.alignright {
+			@extend %pullquote;
+			padding-right: 0;
+			margin-right: 0;
 
-		@include responsive( map_get( $breakpoint, 'xxl' ) ) {
-			margin-right: percentage( -$golden_minor / 4 );
+			&::after,
+			&::before {
+				left: 0;
+				border-right: 1px solid; // thin longer border
+			}
+
+			&::after {
+				border-left: ( $golden_minor / 2 +em ) solid; // thick short border
+			}
+
+			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
+				margin-right: percentage( -$golden_minor / 4 );
+			}
+
 		}
 
 	}
-
-}

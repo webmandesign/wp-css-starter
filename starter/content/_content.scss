@@ -1,66 +1,31 @@
+/* FILE: starter/content/_content.scss */
+
+//
+// Basic WordPress content styles
+//
+
+
+
+
+
 // Imports
 
-/**
- * # WordPress styles
- */
+	@import "wp/wp";
 
-@import "wp/wp";
+	@import "forms/forms";
 
-/**
- * # Forms
- */
+	@import "_base";
 
-@import "forms/forms";
+	@import "media/media";
 
-/**
- * # Headings
- */
+	@import "formats/formats";
 
-@import "headings/headings";
+	@import "pagination/pagination";
 
-/**
- * # Site content
- */
+	@import "meta/meta";
 
-// Content base styles
+	@import "comments/comments";
 
-.site-header,
-.site-content,
-.site-footer,
-.entry-content {
-	@extend .clearfix;
-}
+	@import "sidebar/sidebar";
 
-.entry-summary {
-	margin: 0 0 ( $golden +em );
-}
-
-.link-more {
-	@extend .weight-700;
-}
-
-@import "media/media";
-
-@import "formats/formats";
-
-@import "pagination/pagination";
-
-@import "meta/meta";
-
-/**
- * # Comments
- */
-
-@import "comments/comments";
-
-/**
- * # Sidebar and widgets
- */
-
-@import "sidebar/sidebar";
-
-/**
- * # Plugins integration
- */
-
-@import "plugins/plugins";
+	@import "plugins/plugins";

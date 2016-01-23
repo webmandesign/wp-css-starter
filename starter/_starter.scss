@@ -1,103 +1,76 @@
-// /**
-//  * Starter CSS
-//  *
-//  * Used development prefixes:
-//  * - theme_name
-//  * - version_since
-//  * - version
-//  *
-//  * @package    {%= theme_name %}
-//  * @copyright  2016 WebMan Design, Oliver Juhas
-//  *
-//  * @since    {%= version_since %}
-//  * @version  {%= version %}
-//  */
+/* FILE: starter/_starter.scss */
+
+//
+// Starter CSS
+//
+// Used development prefixes:
+// - theme_name
+// - version_since
+// - version
+//
+// @package    {%= theme_name %}
+// @copyright  2016 WebMan Design, Oliver Juhas
+//
+// @since    {%= version_since %}
+// @version  {%= version %}
+//
 
 
 
 
 
-// /**
-//  * WordPress CSS starter stylesheet
-//  *
-//  * SASS version
-//  *
-//  * This stylesheet was developed for WebMan themes mainly. Contains styles for the most
-//  * commonly used elements in WebMan WordPress themes, with support for several plugins.
-//  *
-//  * The stylesheet does not set any (or just minimal) colors. Use additional CSS styles
-//  * to set background, text and border colors to HTML elements.
-//  *
-//  * No styles are provided for pingback and trackback comments.
-//  *
-//  * Mobile first approach used.
-//  * Breakpoints: 0, 300px, 420px, 680px, 960px, 1200px, 1500px
-//  *
-//  * Browsers compatibility:
-//  * =======================
-//  * - Chrome, Safari, Opera
-//  * - Firefox
-//  * - Internet Explorer 9+
-//  *
-//  * This CSS stylesheet, like WordPress, is licensed under the GPL.
-//  * Use it to make something cool, have fun, and share what you've learned with others.
-//  *
-//  * @copyright  WebMan Design, Oliver Juhas
-//  * @license    GPL-3.0, http://www.gnu.org/licenses/gpl-3.0.html
-//  *
-//  * @version  3.1.7
-//  *
-//  * @link  https://github.com/webmandesign/wp-css-starter
-//  * @link  http://www.webmandesign.eu
-//  *
-//  * @todo  RTL addon
-//  */
+//
+// WordPress CSS starter stylesheet
+//
+// SASS version
+//
+// This stylesheet was developed for WebMan themes mainly. Contains styles for the most
+// commonly used elements in WebMan WordPress themes, with support for several plugins.
+//
+// The stylesheet does not set any (or just minimal) colors. Use additional CSS styles
+// to set background, text and border colors to HTML elements.
+//
+// No styles are provided for pingback and trackback comments.
+//
+// Mobile first approach used.
+// Breakpoints: 0, 300px, 420px, 680px, 960px, 1200px, 1500px
+//
+// Browsers compatibility:
+// =======================
+// - Chrome, Safari, Opera
+// - Firefox
+// - Internet Explorer 9+
+//
+// This CSS stylesheet, like WordPress, is licensed under the GPL.
+// Use it to make something cool, have fun, and share what you've learned with others.
+//
+// @copyright  WebMan Design, Oliver Juhas
+// @license    GPL-3.0, http://www.gnu.org/licenses/gpl-3.0.html
+//
+// @version  3.2
+//
+// @link  https://github.com/webmandesign/wp-css-starter
+// @link  http://www.webmandesign.eu
+//
+// @todo  RTL addon
+//
 
 
-
-
-
-/**
- * Contents:
- *
- * # CSS reset
- * # Base styles
- * # Typography
- * # WordPress styles
- * # Forms
- * # Headings
- * # Site content
- * # Comments
- * # Sidebar and widgets
- * # Plugins integration
- */
 
 
 
 // Imports
 
-@import "tools/functions";
-@import "setup/variables";
-@import "tools/mixins";
+	@import "tools/functions";
 
-/**
- * # CSS reset
- */
+	@import "setup/variables";
 
-@import "generic/generic";
+	@import "tools/mixins";
 
-/**
- * # Base styles
- */
+	@import "generic/generic";
 
-@import "base/base";
+	@import "base/base";
 
-/**
- * # Typography
- */
+	@import "typography/typography";
 
-@import "typography/typography";
-
-// Site content
-
-@import "content/content";
+	@import "content/content";

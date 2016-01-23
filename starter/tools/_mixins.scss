@@ -1,16 +1,26 @@
-// /**
-//  * Responsive media query
-//  *
-//  * Avoid using rem unit in media queries as WebKit seems to ignore them or behave
-//  * strangely (uses 16px base font size no matter what font-size is set up on html).
-//  * @link  http://stackoverflow.com/questions/12201003/media-queries-with-rem-units-in-chrome
-//  *
-//  * @link  https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
-//  *
-//  * @param  string $width     Breakpoint width in px
-//  * @param  string $property  What CSS property to use (if you set `max-$` the $width will be lowered by 1px)
-//  * @param  string $unit      Unit to use with the query (px by default)
-//  */
+/////////////////////
+//
+// Mixins
+//
+/////////////////////
+
+
+
+
+
+//
+// Responsive media query
+//
+// Avoid using rem unit in media queries as WebKit seems to ignore them or behave
+// strangely (uses 16px base font size no matter what font-size is set up on html).
+// @link  http://stackoverflow.com/questions/12201003/media-queries-with-rem-units-in-chrome
+//
+// @link  https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+//
+// @param  string $width     Breakpoint width in px
+// @param  string $property  What CSS property to use (if you set `max-$` the $width will be lowered by 1px)
+// @param  string $unit      Unit to use with the query (px by default)
+//
 @mixin responsive( $width: map_get( $breakpoint, "s" ), $property: 'min-width', $unit: 'px' ) {
 
 	@if 'max' == str-slice( $property, 1, 3 ) {
@@ -31,19 +41,19 @@
 
 
 
-// /**
-//  * Responsive media query: min and max
-//  *
-//  * Avoid using rem unit in media queries as WebKit seems to ignore them or behave
-//  * strangely (uses 16px base font size no matter what font-size is set up on html).
-//  * @link  http://stackoverflow.com/questions/12201003/media-queries-with-rem-units-in-chrome
-//  *
-//  * @param  string $min           Value for $property_min in px
-//  * @param  string $max           Value for $property_max in px (will be lowered by 1px if $property_max = `max-$`)
-//  * @param  string $property_min  What CSS property to use for min
-//  * @param  string $property_max  What CSS property to use for max
-//  * @param  string $unit          Unit to use with the query (px by default)
-//  */
+//
+// Responsive media query: min and max
+//
+// Avoid using rem unit in media queries as WebKit seems to ignore them or behave
+// strangely (uses 16px base font size no matter what font-size is set up on html).
+// @link  http://stackoverflow.com/questions/12201003/media-queries-with-rem-units-in-chrome
+//
+// @param  string $min           Value for $property_min in px
+// @param  string $max           Value for $property_max in px (will be lowered by 1px if $property_max = `max-$`)
+// @param  string $property_min  What CSS property to use for min
+// @param  string $property_max  What CSS property to use for max
+// @param  string $unit          Unit to use with the query (px by default)
+//
 @mixin responsive_minmax( $min: map_get( $breakpoint, "s" ), $max: map_get( $breakpoint, "m" ), $property_min: 'min-width', $property_max: 'max-width', $unit: 'px' ) {
 
 	@if 'max' == str-slice( $property_min, 1, 3 ) {
@@ -70,12 +80,12 @@
 
 
 
-// /**
-//  * Output heading tags styles
-//  *
-//  * @param  num  $multiplier    Alter heading maps values
-//  * @param  bool $global_styles Whether to output the heading tags global styles (these don't according the $multiplier)
-//  */
+//
+// Output heading tags styles
+//
+// @param  num  $multiplier    Alter heading maps values
+// @param  bool $global_styles Whether to output the heading tags global styles (these don't according the $multiplier)
+//
 @mixin h_tags( $multiplier: 1, $global_styles: false ) {
 
 	@each $selector, $settings in $h_tags_setup {
@@ -138,14 +148,14 @@
 
 
 
-// /**
-//  * Context
-//  *
-//  * @link  https://www.youtube.com/watch?v=o4ok4gsiQSw
-//  *
-//  * @param  string $replace
-//  * @param  string $withs
-//  */
+//
+// Context
+//
+// @link  https://www.youtube.com/watch?v=o4ok4gsiQSw
+//
+// @param  string $replace
+// @param  string $withs
+//
 @mixin context( $replace, $withs... ) {
 
 	@each $with in $withs {
@@ -160,29 +170,29 @@
 
 
 
-// /**
-//  * Selectors for container with specific number of children
-//  *
-//  * @link  http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/
-//  *
-//  * @param  string $selector A child selector.
-//  * @param  int    $count    Number of children in container.
-//  * @param  int    $min      Optional starting number of children in container.
-//  *
-//  * IMPORTANT (for LibSass)!
-//  * ========================
-//  *
-//  * To compile correctly with LibSass, we have to move the `@include children()` part
-//  * out of SASS selectors nesting structure and include the whole selectors path again
-//  * in the `children()` mixin.
-//  *
-//  * Otherwise those selectors would be prepended with the nested hierarchy (so, will be duplicated).
-//  *
-//  * Even `@at-root` won't help in this case (plus it's being used in the `children()` mixin).
-//  *
-//  * On the other hand, we have to use LibSass to prevent more complicated issues with line breaks
-//  * in nested selectors...
-//  */
+//
+// Selectors for container with specific number of children
+//
+// @link  http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/
+//
+// @param  string $selector A child selector.
+// @param  int    $count    Number of children in container.
+// @param  int    $min      Optional starting number of children in container.
+//
+// IMPORTANT (for LibSass)!
+// ========================
+//
+// To compile correctly with LibSass, we have to move the `@include children()` part
+// out of SASS selectors nesting structure and include the whole selectors path again
+// in the `children()` mixin.
+//
+// Otherwise those selectors would be prepended with the nested hierarchy (so, will be duplicated).
+//
+// Even `@at-root` won't help in this case (plus it's being used in the `children()` mixin).
+//
+// On the other hand, we have to use LibSass to prevent more complicated issues with line breaks
+// in nested selectors...
+//
 @mixin children( $selector, $count: 2, $min: 1 ) {
 
 	$selectors: ();

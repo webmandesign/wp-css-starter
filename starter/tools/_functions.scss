@@ -1,19 +1,29 @@
-// /**
-//  * Power math function
-//  *
-//  * Usage for standard gloden ratio values:
-//  * 2.62 = power( $golden, 2 )
-//  * 3.62 = power( ( 1 + $golden_minor ), 4 )
-//  * 4.25 = power( $golden, 3 )
-//  * 5.00 = power( ( 1 + $golden_minor ), 5 )
-//  *
-//  * @link  https://github.com/adambom/Sass-Math/blob/master/math.scss
-//  *
-//  * @param  num $base
-//  * @param  int $exp
-//  *
-//  * @return  num Base raised to the power of exponent
-//  */
+/////////////////////
+//
+// Functions
+//
+/////////////////////
+
+
+
+
+
+//
+// Power math function
+//
+// Usage for standard gloden ratio values:
+// 2.62 = power( $golden, 2 )
+// 3.62 = power( ( 1 + $golden_minor ), 4 )
+// 4.25 = power( $golden, 3 )
+// 5.00 = power( ( 1 + $golden_minor ), 5 )
+//
+// @link  https://github.com/adambom/Sass-Math/blob/master/math.scss
+//
+// @param  num $base
+// @param  int $exp
+//
+// @return  num Base raised to the power of exponent
+//
 @function power( $base, $exp: 1 ) {
 
 	// Helper variables
@@ -50,14 +60,14 @@
 
 
 
-// /**
-//  * Convert px value to rem or em
-//  *
-//  * @link  https://webdesign.tutsplus.com/courses/become-a-css-superhero-with-stylus/lessons/create-a-px-to-rem-or-em-converter-function
-//  *
-//  * @param  int $value Value of px to convert
-//  * @param  int $base  If set, the output is in em relative to this base value
-//  */
+//
+// Convert px value to rem or em
+//
+// @link  https://webdesign.tutsplus.com/courses/become-a-css-superhero-with-stylus/lessons/create-a-px-to-rem-or-em-converter-function
+//
+// @param  int $value Value of px to convert
+// @param  int $base  If set, the output is in em relative to this base value
+//
 @function px( $value, $base: 0 ) {
 
 	@if 0 < $base {

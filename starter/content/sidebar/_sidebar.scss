@@ -1,59 +1,73 @@
-.sidebar {
-	@extend %line_height_golden;
-	margin: ( $golden +rem ) 0 0;
-	padding: ( $golden +rem ) 0 0;
+/* FILE: starter/sidebar/_sidebar.scss */
 
-	@include responsive( map_get( $breakpoint, 'l' ) ) {
-		float: right;
-		margin-top: 0;
-		padding-top: 0;
+//
+// Basic sidebar and global widgets styles
+//
+
+
+
+
+
+// Sidebar
+
+	.sidebar {
+		@extend %line_height_golden;
+		margin: ( $golden +rem ) 0 0;
+		padding: ( $golden +rem ) 0 0;
+
+		@include responsive( map_get( $breakpoint, 'l' ) ) {
+			float: right;
+			margin-top: 0;
+			padding-top: 0;
+		}
+
 	}
 
-}
 
-// Basic global widget styles
 
-.widget {
+// Global widget styles
 
-	.sidebar & {
-		margin: ( power( $golden, 2 ) +em ) 0 0;
-	}
+	.widget {
 
-	.sidebar .screen-reader-text + & {
-		margin-top: 0;
-	}
+		.sidebar & {
+			margin: ( power( $golden, 2 ) +em ) 0 0;
+		}
 
-	ul {
-		margin: 0;
-		list-style: none;
+		.sidebar .screen-reader-text + & {
+			margin-top: 0;
+		}
 
-		li {
-			padding: ( $golden_minor +em ) 0;
-			border-top: 1px solid;
-			border-bottom: 1px solid;
-
-			+ li {
-				margin-top: -1px;
-			}
-
-			ul {
-				position: relative;
-				bottom: $golden_minor * -1em;
-				margin: 0 0 -1px;
-			}
+		ul {
+			margin: 0;
+			list-style: none;
 
 			li {
-				padding-left: 1em;
+				padding: ( $golden_minor +em ) 0;
+				border-top: 1px solid;
+				border-bottom: 1px solid;
+
+				+ li {
+					margin-top: -1px;
+				}
+
+				ul {
+					position: relative;
+					bottom: $golden_minor * -1em;
+					margin: 0 0 -1px;
+				}
+
+				li {
+					padding-left: 1em;
+				}
+
 			}
 
 		}
 
 	}
 
-}
-
 
 
 // Imports
 
-@import "_widgets";
+	@import "_widgets";

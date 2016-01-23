@@ -1,41 +1,53 @@
-.comments-area {
-	position: relative;
-}
+/* FILE: starter/comments/_comments.scss */
 
-.comments-title {
-	@extend %font_size_golden_minor;
+//
+// Comments styles
+//
 
-	.add-comment-link {
-		@extend %font_size_small;
-		@extend .weight-400;
-		display: block;
-		margin: 1em 0;
 
-		@include responsive( map_get( $breakpoint, 'l' ) ) {
-			float: right;
-			margin: 0;
+
+
+
+// Basic styles
+
+	.comments-area {
+		position: relative;
+	}
+
+	.comments-title {
+		@extend %font_size_golden_minor;
+
+		.add-comment-link {
+			@extend %font_size_small;
+			@extend .weight-400;
+			display: block;
+			margin: 1em 0;
+
+			@include responsive( map_get( $breakpoint, 'l' ) ) {
+				float: right;
+				margin: 0;
+			}
+
 		}
 
 	}
 
-}
+	.recentcomments {
 
-.recentcomments {
+		a {
+			@extend %font_style_italic;
+		}
 
-	a {
-		@extend %font_style_italic;
 	}
-
-}
 
 
 
 // Imports
 
-@import "_list";
+	@import "_list";
 
-@import "_author";
+	@import "_meta";
 
-@import "_content";
+	@import "_content";
 
-@import "_pagination";
+	@import "_pagination";

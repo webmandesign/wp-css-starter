@@ -1,47 +1,59 @@
-%screen_reader_hiding {
-	clip: rect( 1px, 1px, 1px, 1px );
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	line-height: 1px;
-	overflow: hidden;
-}
+/* FILE: starter/base/__classes.scss */
 
-%screen_reader_hiding_disable {
-	clip: auto;
-	position: static !important;
-	height: auto;
-	width: auto;
-	line-height: normal;
-	overflow: visible;
-}
+//
+// Basic, generic CSS classes
+//
 
-.screen-reader-text {
-	@extend %screen_reader_hiding;
-	padding: 0;
-	margin: 0;
 
-	&:hover,
-	&:active,
-	&:focus {
-		clip: auto !important;
-		display: block;
-		width: auto;
-		height: auto;
-		left: $golden_minor +rem;
-		top: $golden_minor +rem;
-		line-height: normal;
-		text-decoration: none;
-		padding: 1rem;
-		font-size: 14px;
-		font-size: .81rem;
-		font-weight: 700;
-		background-color: #47c;
-		color: #fff;
-		z-index: 100000; /* Above WP toolbar. */
+
+
+
+// Screen reader
+
+	%screen_reader_hiding {
+		clip: rect( 1px, 1px, 1px, 1px );
+		position: absolute !important;
+		height: 1px;
+		width: 1px;
+		line-height: 1px;
+		overflow: hidden;
 	}
 
-}
+	%screen_reader_hiding_disable {
+		clip: auto;
+		position: static !important;
+		height: auto;
+		width: auto;
+		line-height: normal;
+		overflow: visible;
+	}
+
+	.screen-reader-text {
+		@extend %screen_reader_hiding;
+		padding: 0;
+		margin: 0;
+
+		&:hover,
+		&:active,
+		&:focus {
+			clip: auto !important;
+			display: block;
+			width: auto;
+			height: auto;
+			left: $golden_minor +rem;
+			top: $golden_minor +rem;
+			line-height: normal;
+			text-decoration: none;
+			padding: 1rem;
+			font-size: 14px;
+			font-size: .81rem;
+			font-weight: 700;
+			background-color: #47c;
+			color: #fff;
+			z-index: 100000; /* Above WP toolbar. */
+		}
+
+	}
 
 	.focus-position-static {
 
@@ -55,26 +67,34 @@
 
 	// Do not show the outline on the skip link target
 
-	#content[tabindex="-1"]:focus {
-		outline: 0;
+		#content[tabindex="-1"]:focus {
+			outline: 0;
+		}
+
+
+
+// Overflow
+
+	.overflow-hidden {
+		overflow: hidden;
 	}
 
-.overflow-hidden {
-	overflow: hidden;
-}
 
-.vertical-align-top {
-	vertical-align: top;
-}
 
-.vertical-align-middle {
-	vertical-align: middle;
-}
+// Vertical alignment
 
-.vertical-align-baseline {
-	vertical-align: baseline;
-}
+	.vertical-align-top {
+		vertical-align: top;
+	}
 
-.vertical-align-bottom {
-	vertical-align: bottom;
-}
+	.vertical-align-middle {
+		vertical-align: middle;
+	}
+
+	.vertical-align-baseline {
+		vertical-align: baseline;
+	}
+
+	.vertical-align-bottom {
+		vertical-align: bottom;
+	}

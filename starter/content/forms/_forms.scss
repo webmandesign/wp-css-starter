@@ -1,79 +1,89 @@
-// Import forms reset
+/* FILE: starter/forms/_forms.scss */
 
-@import "_reset";
-
-
-
+//
 // Basic form styles
+//
 
-label {
-	display: inline-block;
-	padding-bottom: $golden_minor / 2 +em;
 
-	&[for] {
-		cursor: pointer;
-	}
-
-	+ input[type="checkbox"] {
-		margin-left: $golden_minor +em;
-	}
-
-}
-
-select,
-input:not([type]),
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"] {
-	width: 17em;
-}
-
-textarea {
-	vertical-align: top;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	overflow-y: auto;
-	resize: vertical;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-	position: relative;
-	width: 1em;
-	height: 1em;
-	bottom: $golden_minor / 2 * -1em;
-	margin-right: $golden_minor +em;
-	vertical-align: baseline;
-}
-
-select {
-	position: relative;
-	height: auto;
-	line-height: $golden;
-	word-wrap: normal;
-	overflow-wrap: normal;
-}
-
-input[disabled] {
-	cursor: none;
-	opacity: .66;
-}
 
 
 
 // Imports
 
-@import "_comments";
+	@import "_reset";
 
-@import "_search";
+
+
+// Basic form styles
+
+	label {
+		display: inline-block;
+		padding-bottom: $golden_minor / 2 +em;
+
+		&[for] {
+			cursor: pointer;
+		}
+
+		+ input[type="checkbox"] {
+			margin-left: $golden_minor +em;
+		}
+
+	}
+
+	select,
+	input:not([type]),
+	input[type="color"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"] {
+		width: 17em;
+	}
+
+	textarea {
+		vertical-align: top;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		overflow-y: auto;
+		resize: vertical;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		position: relative;
+		width: 1em;
+		height: 1em;
+		bottom: $golden_minor / 2 * -1em;
+		margin-right: $golden_minor +em;
+		vertical-align: baseline;
+	}
+
+	select {
+		position: relative;
+		height: auto;
+		line-height: $golden;
+		word-wrap: normal;
+		overflow-wrap: normal;
+	}
+
+	input[disabled] {
+		cursor: none;
+		opacity: .66;
+	}
+
+
+
+// Imports
+
+	@import "_comments";
+
+	@import "_search";
