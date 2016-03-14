@@ -33,7 +33,10 @@
 // No styles are provided for pingback and trackback comments.
 //
 // Mobile first approach used.
-// Breakpoints: 0, 300px, 420px, 680px, 960px, 1200px, 1500px
+// Breakpoints: 448px, 672px, 880px, 1280px, 1600px, 1920px, 2560px
+// These are default predefined breakpoints only. Feel free to set your own ones to match
+// your website content and design. All those breakpoints will be converted to `em` units
+// instead of pixels in responsive mixins by default.
 //
 // Browsers compatibility:
 // =======================
