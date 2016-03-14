@@ -17,13 +17,13 @@
 
 	.avatar {
 		position: absolute;
-		left: 0;
+		width: 60 *$px;
+		left: 0; // {{RTL}}
 		top: $golden +em;
-		width: 60*$px;
 		border-radius: 50%;
 
 		@include responsive( map_get( $breakpoint, 'm' ) ) {
-			width: 90*$px;
+			width: 90 *$px;
 		}
 
 	}
@@ -31,23 +31,22 @@
 }
 
 .comment-author {
-	float: left;
+	float: left; // {{RTL}}
 }
 
 .comment-metadata {
 	@extend %font_size_small;
-	float: right;
-	opacity: .6;
+	float: right; // {{RTL}}
+	opacity: .66;
 
 	.edit-link {
-		padding-left: $golden +em;
+		padding-left: $golden +em; // {{RTL}}
 		font-variant: small-caps;
 	}
 
 }
 
 .bypostauthor {
-	// The class is still required for Theme Check to pass.
-	// Need to include some placeholder within for SASS to process the class.
-	/* Placeholder only - WordPress required */
+	// The class is still required for Theme Check to pass,
+	// so, compensate for this in your theme's `style.css` file.
 }

@@ -30,7 +30,7 @@
 
 		&-item {
 			@extend .overflow-hidden;
-			float: left;
+			float: left; // {{RTL}}
 			position: relative;
 			width: percentage( ( 100 / $columns - $gutter ) / 100 );
 			padding: 0;
@@ -86,6 +86,7 @@
 			width: 100%;
 			max-height: 50%;
 			left: 0;
+			right: 0;
 			bottom: 0;
 			padding: ( $golden_major +em ) 1em;
 			opacity: 0;

@@ -44,11 +44,11 @@
 	@include responsive( map_get( $breakpoint, 'm' ) ) {
 
 		.nav-previous {
-			float: left;
+			float: left; // {{RTL}}
 		}
 
 		.nav-next {
-			float: right;
+			float: right; // {{RTL}}
 		}
 
 	}

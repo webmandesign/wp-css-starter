@@ -30,6 +30,6 @@ td {
 th,
 tfoot td {
 	@extend .weight-700;
-	text-align: left;
+	text-align: left; // {{RTL}}
 	border-width: 2px;
 }

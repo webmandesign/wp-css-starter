@@ -24,7 +24,7 @@
 			margin: 1em 0;
 
 			@include responsive( map_get( $breakpoint, 'l' ) ) {
-				float: right;
+				float: right; // {{RTL}}
 				margin: 0;
 			}
 

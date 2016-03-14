@@ -32,7 +32,7 @@
 
 	a {
 		display: block;
-		line-height: 1.38;
+		line-height: 1 + $golden_minor;
 	}
 
 	.current,
@@ -47,13 +47,15 @@
 	@include responsive( map_get( $breakpoint, 'm' ) ) {
 
 		&.top {
-			float: left;
+			float: left; // {{RTL}}
 			display: block;
 			max-width: percentage( $golden_minor );
-			padding: 0 1em 1em 0;
-			margin: 0 ( $golden +em ) 1em 0;
+			padding: 0 1em 1em;
+			padding-left: 0; // {{RTL}}
+			margin: 0 ( $golden +em ) 1em;
+			margin-left: 0; // {{RTL}}
 			border: 0;
-			border-right: 2px solid;
+			border-right: 2px solid; // {{RTL}}
 			border-bottom: 2px solid;
 		}
 

@@ -11,9 +11,8 @@
 // HTML elements
 
 	a {
+		@extend %break_words;
 		text-decoration: none;
-		word-wrap: break-word;
-		overflow-wrap: break-word;
 
 		&:hover {
 			text-decoration: underline;
@@ -30,7 +29,7 @@
 	hr {
 		clear: both;
 		height: 2px;
-		margin: ( power( 1 + $golden_minor, 2 ) +rem ) 0; // 1.909 0
+		margin: ( power( 1 + $golden_minor, 2 ) +rem ) 0;
 		border: 0;
 	}
 
@@ -56,7 +55,7 @@
 			position: absolute;
 			width: percentage( $golden_minor );
 			height: 100%;
-			left: percentage( $golden_major / 2 );
+			left: percentage( $golden_major / 2 ); // {{RTL}}
 			top: 0;
 			pointer-events: none;
 			border-top: 1px solid; // thin longer border
@@ -65,7 +64,7 @@
 
 		&::after {
 			width: 2%;
-			left: 49%;
+			left: 49%; // {{RTL}}
 			border-top: ( $golden_minor / 2 +em ) solid; // thick short border
 			border-bottom: ( $golden_minor / 2 +em ) solid; // thick short border
 		}
@@ -104,11 +103,11 @@
 	q {
 
 		&::before {
-			content: '\201C';
+			content: '\201C'; // {{RTL}}
 		}
 
 		&::after {
-			content: '\201D';
+			content: '\201D'; // {{RTL}}
 		}
 
 	}
@@ -125,7 +124,7 @@
 	del {
 		text-decoration: line-through;
 		color: inherit;
-		opacity: .5;
+		opacity: .66;
 	}
 
 	img,
@@ -184,7 +183,10 @@
 	}
 
 	ul, ol {
-		margin: 0 ( $golden +em ) 1em ( $golden_minor + 1em );
+		margin-top: 0;
+		margin-bottom: 1em;
+		margin-left: $golden_minor + 1em; // {{RTL}}
+		margin-right: 0; // {{RTL}}
 
 		li > & {
 			margin-bottom: 0;
@@ -220,8 +222,40 @@
 	}
 
 	dd {
-		margin-left: $golden +em;
+		margin-left: $golden +em; // {{RTL}}
 	}
+
+
+
+// Helpers
+
+	%break_words {
+		// From @link  https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+
+		// These are technically the same, but use both
+
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+		// This is the dangerous one in WebKit, as it breaks things wherever
+
+			word-break: break-all;
+
+		// Instead use this non-standard one:
+
+			word-break: break-word;
+
+		// Adds a hyphen where the word breaks, if supported (No Blink)
+
+			hyphens: auto;
+	}
+
+		%break_words_disable {
+			overflow-wrap: normal;
+			word-wrap: normal;
+			word-break: normal;
+			hyphens: manual;
+		}
 
 
 

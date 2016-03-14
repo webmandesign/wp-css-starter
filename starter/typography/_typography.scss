@@ -36,19 +36,17 @@
 
 	pre,
 	pre code {
+		@extend %break_words_disable;
 		white-space: -moz-pre-wrap;
 		white-space:      pre-wrap; // http://css-tricks.com/almanac/properties/w/whitespace
-		word-wrap: normal;
-		overflow-wrap: normal;
 		line-height: 1.5;
 	}
 
 	p,
 	address {
+		@extend %break_words;
 		padding: 0;
 		margin: 0 0 ( $golden +em );
-		word-wrap: break-word;
-		overflow-wrap: break-word;
 	}
 
 	.uppercase {

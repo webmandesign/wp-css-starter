@@ -13,16 +13,16 @@
 	.alignleft,
 	.wp-caption.alignleft,
 	img.alignleft {
-		float: left;
-		margin-right: 1em;
+		float: left; // {{RTL}}
+		margin-right: 1em; // {{RTL}}
 		margin-bottom: 1em;
 	}
 
 	.alignright,
 	.wp-caption.alignright,
 	img.alignright {
-		float: right;
-		margin-left: 1em;
+		float: right; // {{RTL}}
+		margin-left: 1em; // {{RTL}}
 		margin-bottom: 1em;
 	}
 
@@ -50,7 +50,7 @@
 		margin-top: 0;
 		margin-left: 6%;
 		margin-right: 6%;
-		text-align: left;
+		text-align: left; // {{RTL}}
 		padding: 0 6%;
 
 		@include responsive( map_get( $breakpoint, 's' ) ) {
@@ -61,9 +61,14 @@
 		&::before {
 			width: 1px;
 			height: percentage( $golden_major );
-			left: auto; // reset the default blockquote style
 			top: percentage( $golden_minor / 2 );
 			border: 0;
+
+			// Reset the default blockquote style from `base/_base.scss` file
+			// Also making it LTR/RTL language neutral
+
+				left: auto;
+				right: auto;
 		}
 
 		&::after {
@@ -78,43 +83,55 @@
 
 		&.alignleft {
 			@extend %pullquote;
-			padding-left: 0;
-			margin-left: 0;
-			text-align: right;
+			padding-left: 0; // {{RTL}}
+			margin-left: 0; // {{RTL}}
+			text-align: right; // {{RTL}}
 
 			&::after,
 			&::before {
-				right: 0;
-				border-right: 1px solid; // thin longer border
+
+				// Thin long border
+
+					right: 0; // {{RTL}}
+					border-right: 1px solid; // {{RTL}}
 			}
 
 			&::after {
-				border-right: ( $golden_minor / 2 +em ) solid; // thick short border
+
+				// Thick short border
+
+					border-right: ( $golden_minor / 2 +em ) solid; // {{RTL}}
 			}
 
 			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
-				margin-left: percentage( -$golden_minor / 4 );
+				margin-left: percentage( -$golden_minor / 4 ); // {{RTL}}
 			}
 
 		}
 
 		&.alignright {
 			@extend %pullquote;
-			padding-right: 0;
-			margin-right: 0;
+			padding-right: 0; // {{RTL}}
+			margin-right: 0; // {{RTL}}
 
 			&::after,
 			&::before {
-				left: 0;
-				border-right: 1px solid; // thin longer border
+
+				// Thin long border
+
+					left: 0; // {{RTL}}
+					border-right: 1px solid; // {{RTL}}
 			}
 
 			&::after {
-				border-left: ( $golden_minor / 2 +em ) solid; // thick short border
+
+				// Thick short border
+
+					border-left: ( $golden_minor / 2 +em ) solid; // {{RTL}}
 			}
 
 			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
-				margin-right: percentage( -$golden_minor / 4 );
+				margin-right: percentage( -$golden_minor / 4 ); // {{RTL}}
 			}
 
 		}

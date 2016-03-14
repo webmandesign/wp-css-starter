@@ -13,18 +13,17 @@
 
 	a,
 	span {
-		$margin: $golden_minor / 2 +em;
-
 		display: none;
 		width: power( $golden, 2 ) +em;
 		padding: ( $golden_major +em ) 0;
-		margin: $margin $margin $margin 0;
+		margin: $golden_minor / 2 +em;
+		margin-left: 0; // {{RTL}}
 		text-align: center;
 		text-decoration: none;
 	}
 
 	a {
-		opacity: .5;
+		opacity: .66;
 	}
 
 	> span,

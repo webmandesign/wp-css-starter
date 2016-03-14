@@ -26,7 +26,7 @@
 #cancel-comment-reply-link {
 	@extend %font_size_small;
 	@extend .weight-400;
-	float: right;
+	float: right; // {{RTL}}
 }
 
 .comment-form {
@@ -62,11 +62,13 @@
 
 	.comment-form-author,
 	.comment-form-email {
-		float: left;
+		float: left; // {{RTL}}
 		width: 48%;
-		margin-left: 4%;
+		margin-left: 4%; // {{RTL}}
 	}
 
-	.comment-form-author { margin-left: 0; }
+	.comment-form-author {
+		margin-left: 0; // {{RTL}}
+	}
 
 }
