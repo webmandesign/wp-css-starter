@@ -10,6 +10,15 @@
 
 // HTML elements
 
+	@if rtl == $language_direction {
+
+		body {
+			direction: rtl;
+			unicode-bidi: embed;
+		}
+
+	}
+
 	a {
 		@extend %break_words;
 		text-decoration: none;
