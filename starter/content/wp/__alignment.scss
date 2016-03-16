@@ -13,16 +13,16 @@
 	.alignleft,
 	.wp-caption.alignleft,
 	img.alignleft {
-		float: $left; // {{RTL}}
-		margin-#{$right}: 1em; // {{RTL}}
+		float: left;
+		margin-right: 1em;
 		margin-bottom: 1em;
 	}
 
 	.alignright,
 	.wp-caption.alignright,
 	img.alignright {
-		float: $right; // {{RTL}}
-		margin-#{$left}: 1em; // {{RTL}}
+		float: right;
+		margin-left: 1em;
 		margin-bottom: 1em;
 	}
 
@@ -83,55 +83,55 @@
 
 		&.alignleft {
 			@extend %pullquote;
-			padding-#{$left}: 0; // {{RTL}}
-			margin-#{$left}: 0; // {{RTL}}
-			text-align: $right; // {{RTL}}
+			padding-left: 0;
+			margin-left: 0;
+			text-align: right;
 
 			&::after,
 			&::before {
 
 				// Thin long border
 
-					#{$right}: 0; // {{RTL}}
-					border-#{$right}: 1px solid; // {{RTL}}
+					right: 0;
+					border-right: 1px solid;
 			}
 
 			&::after {
 
 				// Thick short border
 
-					border-#{$right}: ( $golden_minor / 2 +em ) solid; // {{RTL}}
+					border-right: ( $golden_minor / 2 +em ) solid;
 			}
 
 			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
-				margin-#{$left}: percentage( -$golden_minor / 4 ); // {{RTL}}
+				margin-left: percentage( -$golden_minor / 4 );
 			}
 
 		}
 
 		&.alignright {
 			@extend %pullquote;
-			padding-#{$right}: 0; // {{RTL}}
-			margin-#{$right}: 0; // {{RTL}}
+			padding-right: 0;
+			margin-right: 0;
 
 			&::after,
 			&::before {
 
 				// Thin long border
 
-					#{$left}: 0; // {{RTL}}
-					border-#{$right}: 1px solid; // {{RTL}}
+					left: 0;
+					border-right: 1px solid;
 			}
 
 			&::after {
 
 				// Thick short border
 
-					border-#{$left}: ( $golden_minor / 2 +em ) solid; // {{RTL}}
+					border-left: ( $golden_minor / 2 +em ) solid;
 			}
 
 			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
-				margin-#{$right}: percentage( -$golden_minor / 4 ); // {{RTL}}
+				margin-right: percentage( -$golden_minor / 4 );
 			}
 
 		}
