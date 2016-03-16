@@ -14,19 +14,25 @@
 
 
 
-// RTL SUPPORT
-// ===========
-//
-// There are `{{RTL}}` notes left in the code where change is needed when
-// porting to RTL languages.
-
-
-
 
 
 //
 // Globals
 //
+
+	// RTL support
+	//
+	// There are `{{RTL}}` notes left in the code where change is applicable.
+
+		$language_direction: ltr !default;
+
+		@if rtl == $language_direction {
+			$left: right;
+			$right: left;
+		} @else {
+			$left: left;
+			$right: right;
+		}
 
 	// Golden ratio
 

@@ -185,7 +185,7 @@
 						$gutter: 2; // %
 						width: percentage( ( ( 100 + $gutter ) / $columns - $gutter ) / 100 );
 						margin: 0;
-						margin-left: percentage( $gutter / 100 ); // {{RTL}}
+						margin-#{$left}: percentage( $gutter / 100 ); // {{RTL}}
 					}
 
 				}
@@ -254,7 +254,7 @@
 
 						a.sd-button {
 							margin: ( $golden_major / 2 +em ) ( $golden_major +em );
-							margin-left: 0; // {{RTL}}
+							margin-#{$left}: 0; // {{RTL}}
 
 							&:not(.no-text) {
 								padding: ( $golden_major +em ) 1em;
@@ -373,9 +373,9 @@
 			}
 
 			#subscribe-email {
-				float: left; // {{RTL}}
+				float: $left; // {{RTL}}
 				width: percentage( $golden_major );
-				padding-right: $golden_major +em; // {{RTL}}
+				padding-#{$right}: $golden_major +em; // {{RTL}}
 				margin-bottom: 0;
 
 				input {
@@ -386,7 +386,7 @@
 			}
 
 			#subscribe-submit {
-				float: right; // {{RTL}}
+				float: $right; // {{RTL}}
 				width: percentage( $golden_minor );
 				margin-bottom: 0;
 			}
@@ -405,7 +405,7 @@
 
 				.widgets-list-layout-blavatar {
 					width: 40 *$px;
-					margin-right: 1em; // {{RTL}}
+					margin-#{$right}: 1em; // {{RTL}}
 				}
 
 				&-links {

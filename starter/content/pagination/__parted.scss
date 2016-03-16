@@ -47,15 +47,15 @@
 	@include responsive( map_get( $breakpoint, 'm' ) ) {
 
 		&.top {
-			float: left; // {{RTL}}
+			float: $left; // {{RTL}}
 			display: block;
 			max-width: percentage( $golden_minor );
 			padding: 0 1em 1em;
-			padding-left: 0; // {{RTL}}
+			padding-#{$left}: 0; // {{RTL}}
 			margin: 0 ( $golden +em ) 1em;
-			margin-left: 0; // {{RTL}}
+			margin-#{$left}: 0; // {{RTL}}
 			border: 0;
-			border-right: 2px solid; // {{RTL}}
+			border-#{$right}: 2px solid; // {{RTL}}
 			border-bottom: 2px solid;
 		}
 

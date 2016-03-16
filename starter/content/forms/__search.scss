@@ -14,7 +14,7 @@
 	position: relative;
 	max-width: 100%;
 	margin: 0;
-	text-align: left; // {{RTL}}
+	text-align: $left; // {{RTL}}
 
 	.search-field {
 		position: relative;

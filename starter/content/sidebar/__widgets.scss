@@ -83,7 +83,7 @@
 			.widget_recent_entries &,
 			.widget_zilla_likes_widget & {
 				position: relative;
-				padding-left: $golden +em; // {{RTL}}
+				padding-#{$left}: $golden +em; // {{RTL}}
 			}
 
 		}
@@ -108,13 +108,13 @@
 		.widget & {
 
 			a {
-				float: left; // {{RTL}}
+				float: $left; // {{RTL}}
 				position: relative;
 				display: inline-block;
 				width: auto;
 				padding: ( $golden_minor / 2 +em ) ( $golden_major +em );
 				margin: 2px 2px 0;
-				margin-left: 0; // {{RTL}}
+				margin-#{$left}: 0; // {{RTL}}
 				white-space: nowrap;
 				font-size: 1em !important;
 				background-color: transparent;
@@ -153,7 +153,7 @@
 					content: attr(title);
 					position: absolute;
 					display: none;
-					left: 100%; // {{RTL}}
+					#{$left}: 100%; // {{RTL}}
 					top: -1px;
 					padding: ( $golden_minor / 2 +em ) ( $golden_major +em );
 					pointer-events: none;

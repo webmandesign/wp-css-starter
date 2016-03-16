@@ -40,7 +40,7 @@
 			display: block;
 			width: auto;
 			height: auto;
-			left: $golden_minor +rem; // {{RTL}}
+			#{$left}: $golden_minor +rem; // {{RTL}}
 			top: $golden_minor +rem;
 			line-height: normal;
 			text-decoration: none;

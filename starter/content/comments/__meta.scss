@@ -18,7 +18,7 @@
 	.avatar {
 		position: absolute;
 		width: 60 *$px;
-		left: 0; // {{RTL}}
+		#{$left}: 0; // {{RTL}}
 		top: $golden +em;
 		border-radius: 50%;
 
@@ -31,16 +31,16 @@
 }
 
 .comment-author {
-	float: left; // {{RTL}}
+	float: $left; // {{RTL}}
 }
 
 .comment-metadata {
 	@extend %font_size_small;
-	float: right; // {{RTL}}
+	float: $right; // {{RTL}}
 	opacity: .66;
 
 	.edit-link {
-		padding-left: $golden +em; // {{RTL}}
+		padding-#{$left}: $golden +em; // {{RTL}}
 		font-variant: small-caps;
 	}
 

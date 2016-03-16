@@ -16,7 +16,7 @@
 		padding: ( $golden +rem ) 0 0;
 
 		@include responsive( map_get( $breakpoint, 'l' ) ) {
-			float: right; // {{RTL}}
+			float: $right; // {{RTL}}
 			margin-top: 0;
 			padding-top: 0;
 		}
@@ -57,7 +57,7 @@
 				}
 
 				li {
-					padding-left: 1em; // {{RTL}}
+					padding-#{$left}: 1em; // {{RTL}}
 				}
 
 			}

@@ -11,10 +11,10 @@
 .breadcrumbs {
 
 	&-title {
-		margin-right: $golden_major +em; // {{RTL}}
+		margin-#{$right}: $golden_major +em; // {{RTL}}
 
 		@include responsive( map_get( $breakpoint, 'm' ) ) {
-			margin-right: $golden +em; // {{RTL}}
+			margin-#{$right}: $golden +em; // {{RTL}}
 		}
 
 	}

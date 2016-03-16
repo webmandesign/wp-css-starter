@@ -55,7 +55,7 @@
 			position: absolute;
 			width: percentage( $golden_minor );
 			height: 100%;
-			left: percentage( $golden_major / 2 ); // {{RTL}}
+			#{$left}: percentage( $golden_major / 2 ); // {{RTL}}
 			top: 0;
 			pointer-events: none;
 			border-top: 1px solid; // thin longer border
@@ -64,7 +64,7 @@
 
 		&::after {
 			width: 2%;
-			left: 49%; // {{RTL}}
+			#{$left}: 49%; // {{RTL}}
 			border-top: ( $golden_minor / 2 +em ) solid; // thick short border
 			border-bottom: ( $golden_minor / 2 +em ) solid; // thick short border
 		}
@@ -103,11 +103,21 @@
 	q {
 
 		&::before {
-			content: '\201C'; // {{RTL}}
+			content: '\201C';
+
+			[dir="rtl"] & {
+				content: '\201D';
+			}
+
 		}
 
 		&::after {
-			content: '\201D'; // {{RTL}}
+			content: '\201D';
+
+			[dir="rtl"] & {
+				content: '\201C';
+			}
+
 		}
 
 	}
@@ -185,8 +195,8 @@
 	ul, ol {
 		margin-top: 0;
 		margin-bottom: 1em;
-		margin-left: $golden_minor + 1em; // {{RTL}}
-		margin-right: 0; // {{RTL}}
+		margin-#{$left}: $golden_minor + 1em; // {{RTL}}
+		margin-#{$right}: 0; // {{RTL}}
 
 		li > & {
 			margin-bottom: 0;
@@ -222,7 +232,7 @@
 	}
 
 	dd {
-		margin-left: $golden +em; // {{RTL}}
+		margin-#{$left}: $golden +em; // {{RTL}}
 	}
 
 

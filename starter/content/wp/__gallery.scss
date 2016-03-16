@@ -30,7 +30,7 @@
 
 		&-item {
 			@extend .overflow-hidden;
-			float: left; // {{RTL}}
+			float: $left; // {{RTL}}
 			position: relative;
 			width: percentage( ( 100 / $columns - $gutter ) / 100 );
 			padding: 0;

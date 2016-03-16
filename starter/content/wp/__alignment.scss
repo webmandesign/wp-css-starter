@@ -13,16 +13,16 @@
 	.alignleft,
 	.wp-caption.alignleft,
 	img.alignleft {
-		float: left; // {{RTL}}
-		margin-right: 1em; // {{RTL}}
+		float: $left; // {{RTL}}
+		margin-#{$right}: 1em; // {{RTL}}
 		margin-bottom: 1em;
 	}
 
 	.alignright,
 	.wp-caption.alignright,
 	img.alignright {
-		float: right; // {{RTL}}
-		margin-left: 1em; // {{RTL}}
+		float: $right; // {{RTL}}
+		margin-#{$left}: 1em; // {{RTL}}
 		margin-bottom: 1em;
 	}
 
@@ -50,7 +50,7 @@
 		margin-top: 0;
 		margin-left: 6%;
 		margin-right: 6%;
-		text-align: left; // {{RTL}}
+		text-align: $left; // {{RTL}}
 		padding: 0 6%;
 
 		@include responsive( map_get( $breakpoint, 's' ) ) {
@@ -83,55 +83,55 @@
 
 		&.alignleft {
 			@extend %pullquote;
-			padding-left: 0; // {{RTL}}
-			margin-left: 0; // {{RTL}}
-			text-align: right; // {{RTL}}
+			padding-#{$left}: 0; // {{RTL}}
+			margin-#{$left}: 0; // {{RTL}}
+			text-align: $right; // {{RTL}}
 
 			&::after,
 			&::before {
 
 				// Thin long border
 
-					right: 0; // {{RTL}}
-					border-right: 1px solid; // {{RTL}}
+					#{$right}: 0; // {{RTL}}
+					border-#{$right}: 1px solid; // {{RTL}}
 			}
 
 			&::after {
 
 				// Thick short border
 
-					border-right: ( $golden_minor / 2 +em ) solid; // {{RTL}}
+					border-#{$right}: ( $golden_minor / 2 +em ) solid; // {{RTL}}
 			}
 
 			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
-				margin-left: percentage( -$golden_minor / 4 ); // {{RTL}}
+				margin-#{$left}: percentage( -$golden_minor / 4 ); // {{RTL}}
 			}
 
 		}
 
 		&.alignright {
 			@extend %pullquote;
-			padding-right: 0; // {{RTL}}
-			margin-right: 0; // {{RTL}}
+			padding-#{$right}: 0; // {{RTL}}
+			margin-#{$right}: 0; // {{RTL}}
 
 			&::after,
 			&::before {
 
 				// Thin long border
 
-					left: 0; // {{RTL}}
-					border-right: 1px solid; // {{RTL}}
+					#{$left}: 0; // {{RTL}}
+					border-#{$right}: 1px solid; // {{RTL}}
 			}
 
 			&::after {
 
 				// Thick short border
 
-					border-left: ( $golden_minor / 2 +em ) solid; // {{RTL}}
+					border-#{$left}: ( $golden_minor / 2 +em ) solid; // {{RTL}}
 			}
 
 			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
-				margin-right: percentage( -$golden_minor / 4 ); // {{RTL}}
+				margin-#{$right}: percentage( -$golden_minor / 4 ); // {{RTL}}
 			}
 
 		}

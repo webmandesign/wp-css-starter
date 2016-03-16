@@ -44,7 +44,7 @@
 
 	caption {
 		@extend %font_style_italic;
-		text-align: left; // {{RTL}}
+		text-align: $left; // {{RTL}}
 		caption-side: bottom;
 	}
 

@@ -12,7 +12,7 @@
 	content: '';
 	position: relative;
 	margin: -( $golden_minor / 4 +em ) 0 0;
-	margin-right: $golden_minor / 4 +em; // {{RTL}}
+	margin-#{$right}: $golden_minor / 4 +em; // {{RTL}}
 	font-size: $golden_minor + 1em;
 	vertical-align: middle;
 }
@@ -37,7 +37,7 @@
 	}
 
 	&-element {
-		margin-right: $golden_minor +em; // {{RTL}}
+		margin-#{$right}: $golden_minor +em; // {{RTL}}
 		opacity: .66;
 
 		&::before {
@@ -45,7 +45,7 @@
 		}
 
 		.single & {
-			margin-right: 1em; // {{RTL}}
+			margin-#{$right}: 1em; // {{RTL}}
 		}
 
 	}
