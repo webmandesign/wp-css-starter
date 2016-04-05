@@ -256,24 +256,15 @@
 			overflow-wrap: break-word;
 			word-wrap: break-word;
 
-		// This is the dangerous one in WebKit, as it breaks things wherever
-
-			word-break: break-all;
-
-		// Instead use this non-standard one:
-
-			word-break: break-word;
-
 		// Adds a hyphen where the word breaks, if supported (No Blink)
 
-			hyphens: auto;
+			// hyphens: auto;
 	}
 
 		%break_words_disable {
 			overflow-wrap: normal;
 			word-wrap: normal;
-			word-break: normal;
-			hyphens: manual;
+			// hyphens: manual;
 		}
 
 
