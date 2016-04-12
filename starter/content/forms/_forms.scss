@@ -76,8 +76,8 @@
 
 			-webkit-appearance: none;
 				 -moz-appearance: none;
-			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAYAAAB4zEQNAAAAR0lEQVQYV42QUQ4AEAxDvcs6lMtOii0LIvYhTV7bgbLGzKproEmjwwEgPTwykEFqmQZBJfZRQyQP6skb+K/Ne+PGz6e8PqEDeXE2Xb1MliUAAAAASUVORK5CYII='); // Don't use SVG here: it's not IE ready and will be stripped out with `wmhook_THEMESLUG_esc_css` filter
-			background-size: 7px 9px;
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAHklEQVQYV2NkYGCoZ8ADGP///49fAT7dIDnGoWAFAEGRC/pgHyp1AAAAAElFTkSuQmCC'); // Don't use SVG here: it's not IE ready and will be stripped out with `wmhook_THEMESLUG_esc_css` filter
+			background-size: 8px 8px;
 			background-position: $right center; // {{RTL}}
 			background-origin: content-box;
 			background-repeat: no-repeat;
