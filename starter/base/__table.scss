@@ -13,7 +13,17 @@ table {
 	width: 100%;
 	margin: 0 0 $golden*1em;
 	border: 2px solid;
-	border-collapse: collapse;
+
+	.site & {
+		//
+		// Has to be more specific as otherwise it causes some weird issue in WordPress 4.5 (with jQuery 1.2.0+) and Beaver Builder.
+		// Simply, Beaver Builder does not open media library. The issue must be related to jQuery, but can be fixed by applying
+		// table border collapse more specifically.
+		// The issue only occurs when these styles are applied on table: `table { border-style: solid; border-collapse: collapse; }`
+		//
+		border-collapse: collapse;
+	}
+
 }
 
 caption {
