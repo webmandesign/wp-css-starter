@@ -50,7 +50,7 @@
 				@extend %line_height_golden_minor;
 
 				a {
-					@extend .weight-700;
+					@extend %font_weight_700;
 				}
 
 			}
@@ -90,7 +90,7 @@
 			.entry-content {
 
 				a {
-					@extend .weight-700;
+					@extend %font_weight_700;
 				}
 
 			}
@@ -113,7 +113,7 @@
 				@extend %line_height_golden;
 
 				a {
-					@extend .weight-700;
+					@extend %font_weight_700;
 				}
 
 			}

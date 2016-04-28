@@ -45,7 +45,7 @@
 	}
 
 	.current {
-		@extend .weight-700;
+		@extend %font_weight_700;
 	}
 
 	@include responsive( map_get( $breakpoint, 'm' ) ) {

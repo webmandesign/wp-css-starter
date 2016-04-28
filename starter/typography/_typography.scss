@@ -150,15 +150,17 @@
 	// 700 = bold
 	//
 	// @link  https://developer.mozilla.org/en/docs/Web/CSS/font-weight
-	//
-	// Reversing order for easier overriding.
 
-	@for $i from 8 through 1 {
+	@for $i from 1 through 9 {
 
 		$weight: $i * 100;
 
-		.weight-#{$weight} {
+		%font_weight_#{$weight} {
 			font-weight: $weight;
+		}
+
+		.weight-#{$weight} {
+			@extend %font_weight_#{$weight};
 		}
 
 	}

@@ -49,7 +49,7 @@
 
 	blockquote {
 		@extend %font_size_golden_minor;
-		@extend .weight-300;
+		@extend %font_weight_300;
 		@extend %line_height_golden_minor;
 		clear: both;
 		position: relative;
@@ -102,7 +102,7 @@
 
 		blockquote & {
 			@extend %font_size_small;
-			@extend .weight-400;
+			@extend %font_weight_400;
 			display: block;
 			margin-top: $golden_major +em;
 		}
@@ -236,7 +236,7 @@
 	}
 
 	dt {
-		@extend .weight-700;
+		@extend %font_weight_700;
 		margin-top: $golden_major +em;
 	}
 
@@ -258,13 +258,13 @@
 
 		// Adds a hyphen where the word breaks, if supported (No Blink)
 
-			// hyphens: auto;
+			hyphens: auto;
 	}
 
 		%break_words_disable {
 			overflow-wrap: normal;
 			word-wrap: normal;
-			// hyphens: manual;
+			hyphens: manual;
 		}
 
 

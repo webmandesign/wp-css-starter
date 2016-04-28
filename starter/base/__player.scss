@@ -28,20 +28,28 @@
 			}
 
 			.mejs-time-rail {
+				height: 100%;
+				padding: 0;
+				margin: 0;
 
 				.mejs-time-total {
-					background: darken( $color_mejs_bg, 6% );
+					height: 100%;
+					margin-top: 0;
+					margin-bottom: 0;
+					background: darken( $color_mejs_bg, 4% );
 				}
 
 				.mejs-time-loaded {
-					height: 6px;
-					margin-top: 2px;
-					background: lighten( $color_mejs_bg, 6% );
+					height: 4px;
+					margin-top: 23px;
+					background: lighten( $color_mejs_bg, 2% );
+					background: repeating-linear-gradient( 90deg, transparent, transparent 2px, lighten( $color_mejs_bg, 2% ) 2px, lighten( $color_mejs_bg, 2% ) 4px );
 					border-radius: 0;
 				}
 
 				.mejs-time-current {
-					background: lighten( $color_mejs_bg, 4 * 6% );
+					height: 100%;
+					background: lighten( $color_mejs_bg, 4 * 4% );
 				}
 
 			}

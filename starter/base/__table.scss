@@ -39,7 +39,7 @@ td {
 
 th,
 tfoot td {
-	@extend .weight-700;
+	@extend %font_weight_700;
 	text-align: $left; // {{RTL}}
 	border-width: 2px;
 }

@@ -25,49 +25,6 @@
 
 
 
-// Global widget styles
-
-	.widget {
-
-		.sidebar & {
-			margin: ( power( $golden, 2 ) +em ) 0 0;
-		}
-
-		.sidebar .screen-reader-text + & {
-			margin-top: 0;
-		}
-
-		ul {
-			margin: 0;
-			list-style: none;
-
-			li {
-				padding: ( $golden_minor +em ) 0;
-				border-top: 1px solid;
-				border-bottom: 1px solid;
-
-				+ li {
-					margin-top: -1px;
-				}
-
-				ul {
-					position: relative;
-					bottom: $golden_minor * -1em;
-					margin: 0 0 -1px;
-				}
-
-				li {
-					padding-#{$left}: 1em; // {{RTL}}
-				}
-
-			}
-
-		}
-
-	}
-
-
-
 // Imports
 
 	@import "_widgets";

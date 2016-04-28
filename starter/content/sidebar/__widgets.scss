@@ -1,10 +1,55 @@
 /* FILE: starter/sidebar/__widgets.scss */
 
 //
+// Global basic widget styles
 // WordPress native widgets styles
 //
 
 
+
+
+
+// Global basic widget styles
+
+	.widget {
+
+		.sidebar & {
+			margin: 0 0 ( power( $golden, 2 ) +em );
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+
+		ul {
+			margin: 0;
+			list-style: none;
+
+			li {
+				padding: ( $golden_minor +em ) 0;
+				border-top: 1px solid;
+				border-bottom: 1px solid;
+
+				+ li {
+					margin-top: -1px;
+				}
+
+				ul {
+					position: relative;
+					bottom: $golden_minor * -1em;
+					margin: 0 0 -1px;
+				}
+
+				li {
+					padding-#{$left}: 1em; // {{RTL}}
+				}
+
+			}
+
+		}
+
+	}
 
 
 
@@ -14,7 +59,7 @@
 
 		caption {
 			@extend %font_style_normal;
-			@extend .weight-700;
+			@extend %font_weight_700;
 			text-align: center;
 			caption-side: top;
 		}
@@ -64,7 +109,7 @@
 	.widget .current_page_item {
 
 		> a {
-			@extend .weight-700;
+			@extend %font_weight_700;
 		}
 
 	}

@@ -25,7 +25,7 @@
 
 #cancel-comment-reply-link {
 	@extend %font_size_small;
-	@extend .weight-400;
+	@extend %font_weight_400;
 	float: $right; // {{RTL}}
 }
 
@@ -37,7 +37,7 @@
 
 	label {
 		@extend %font_size_small;
-		@extend .weight-700;
+		@extend %font_weight_700;
 		display: block;
 	}
 
