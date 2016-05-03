@@ -8,6 +8,7 @@
 
 
 
+form[role="search"],
 .form-search,
 .search-form {
 	display: block;
@@ -16,6 +17,7 @@
 	margin: 0;
 	text-align: $left; // {{RTL}}
 
+	input[type="search"],
 	.search-field {
 		position: relative;
 		width: 100%;
