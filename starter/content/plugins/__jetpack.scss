@@ -117,6 +117,7 @@
 // Related posts
 
 	div#jp-relatedposts {
+		font-size: 1rem;
 
 		.site & {
 			padding-top: $golden +em;
@@ -217,6 +218,7 @@
 	div.sharedaddy {
 		padding: ( $golden +em ) 0 0;
 		margin: ( $golden +em ) 0 0;
+		font-size: 1rem;
 		border-top: 2px solid;
 
 		.sd-social {
@@ -233,7 +235,7 @@
 
 		}
 
-		.entry-content & {
+		.site & {
 
 			.sd-title {
 
@@ -242,9 +244,6 @@
 				}
 
 			}
-
-		}
-		.entry-content & {
 
 			.sd-content {
 
