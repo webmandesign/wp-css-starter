@@ -70,16 +70,19 @@
 		@extend %break_words_disable;
 		position: relative;
 		height: auto;
+		padding-#{$right}: 21px;
 		line-height: $golden;
 
 		// Inspiration from Foundation @link  http://foundation.zurb.com/sites/docs/forms.html#select-menus
+		//
+		// Dropdown selector image source at `helpers` folder of GitHub repository
+		// and processed with https://www.base64-image.de/
 
 			-webkit-appearance: none;
 				 -moz-appearance: none;
-			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAHklEQVQYV2NkYGCoZ8ADGP///49fAT7dIDnGoWAFAEGRC/pgHyp1AAAAAElFTkSuQmCC'); // Don't use SVG here: it's not IE ready and will be stripped out with `wmhook_THEMESLUG_esc_css` filter
-			background-size: 8px 8px;
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAASCAYAAAAQeC39AAAACXBIWXMAABuvAAAbrwFeGpEcAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAADNJREFUeNrt1MENADAIAzFGZ/N0B4T41JYyQD5Xxb96aY6dSNIbcwxUURVVEVRRFVVx6AEDTK7MSHGk9QAAAABJRU5ErkJggg=='); // Don't use SVG here: it's not IE ready and will be stripped out with `wmhook_THEMESLUG_esc_css` filter
+			background-size: 21px 9px;
 			background-position: $right center; // {{RTL}}
-			background-origin: content-box;
 			background-repeat: no-repeat;
 
 			&:disabled {

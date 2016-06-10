@@ -122,6 +122,8 @@
 			font-size: 1em * $golden; // 1.62
 		}
 
+
+
 		.font-size-xs { // extra small
 			@extend %font_size_tiny;
 		}
@@ -130,8 +132,8 @@
 			@extend %font_size_small;
 		}
 
-		.font-size-m { // medium
-			@extend %font_size_1em;
+		.font-size-sm { // small
+			@extend %font_size_smaller;
 		}
 
 		.font-size-l { // large
@@ -159,6 +161,8 @@
 			font-weight: $weight;
 		}
 
+
+
 		.weight-#{$weight} {
 			@extend %font_weight_#{$weight};
 		}
@@ -179,19 +183,31 @@
 
 
 
+	.font-style-italic {
+		@extend %font_style_italic;
+	}
+
+	.font-style-normal {
+		@extend %font_style_normal;
+	}
+
+
+
 // Line height
 
-	%line_height_golden {
-		line-height: $golden; // 1.62
+	%line_height_1 {
+		line-height: 1;
 	}
 
 	%line_height_golden_minor {
 		line-height: 1 + $golden_minor; // 1.38
 	}
 
-	%line_height_1 {
-		line-height: 1;
+	%line_height_golden {
+		line-height: $golden; // 1.62
 	}
+
+
 
 	.line-height-xs { // extra small
 		@extend %line_height_1;

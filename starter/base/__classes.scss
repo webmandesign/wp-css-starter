@@ -69,6 +69,7 @@
 
 	// Do not show the outline on the skip link target
 
+		// @todo  Don't use ID selector if possible
 		#content[tabindex="-1"]:focus {
 			outline: 0;
 		}
@@ -85,18 +86,36 @@
 
 // Vertical alignment
 
-	.vertical-align-top {
+	%vertical_align_top {
 		vertical-align: top;
 	}
 
-	.vertical-align-middle {
+	%vertical_align_middle {
 		vertical-align: middle;
 	}
 
-	.vertical-align-baseline {
+	%vertical_align_baseline {
 		vertical-align: baseline;
 	}
 
-	.vertical-align-bottom {
+	%vertical_align_bottom {
 		vertical-align: bottom;
+	}
+
+
+
+	.vertical-align-top {
+		@extend %vertical_align_top;
+	}
+
+	.vertical-align-middle {
+		@extend %vertical_align_middle;
+	}
+
+	.vertical-align-baseline {
+		@extend %vertical_align_baseline;
+	}
+
+	.vertical-align-bottom {
+		@extend %vertical_align_bottom;
 	}
