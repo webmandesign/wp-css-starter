@@ -9,6 +9,18 @@
 
 
 //
+// Vendor Imports
+//
+
+	//
+	// @link  http://instyle-css.salsitasoft.com/
+	// @link  https://css-tricks.com/instyle-current-selector-sass/
+	//
+	@import "vendor/instyle";
+
+
+
+//
 // Responsive media query
 //
 // Avoid using rem unit in media queries as WebKit seems to ignore them or behave
