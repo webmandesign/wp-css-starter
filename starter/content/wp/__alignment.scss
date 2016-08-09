@@ -62,7 +62,7 @@
 			width: 1px;
 			height: percentage( $golden_major );
 			top: percentage( $golden_minor / 2 );
-			border: 0;
+			border-width: 0;
 
 			// Reset the default blockquote style from `base/_base.scss` file
 			// Also making it LTR/RTL language neutral
@@ -74,7 +74,7 @@
 		&::after {
 			height: 6%;
 			top: 47%;
-			border: 0;
+			border-width: 0;
 		}
 
 	}
@@ -93,14 +93,16 @@
 				// Thin long border
 
 					right: 0;
-					border-right: 1px solid;
+					border-right-width: 1px;
+					border-right-style: solid;
 			}
 
 			&::after {
 
 				// Thick short border
 
-					border-right: ( $golden_minor / 2 +em ) solid;
+					border-right-width: $golden_minor / 2 +em;
+					border-right-style: solid;
 			}
 
 			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
@@ -120,14 +122,16 @@
 				// Thin long border
 
 					left: 0;
-					border-right: 1px solid;
+					border-right-width: 1px;
+					border-right-style: solid;
 			}
 
 			&::after {
 
 				// Thick short border
 
-					border-left: ( $golden_minor / 2 +em ) solid;
+					border-left-width: $golden_minor / 2 +em;
+					border-left-style: solid;
 			}
 
 			@include responsive( map_get( $breakpoint, 'xxl' ) ) {

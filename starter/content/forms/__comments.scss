@@ -10,11 +10,13 @@
 
 .comment-respond {
 	padding: ( $golden +em ) 0 0;
-	border-top: 2px solid;
+	border-top-width: 2px;
+	border-top-style: solid;
 
 	.comment-list & {
 		margin: ( $golden +em ) 0;
-		border-bottom: 2px solid;
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
 	}
 
 }

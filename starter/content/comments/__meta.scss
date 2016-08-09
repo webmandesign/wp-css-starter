@@ -13,7 +13,8 @@
 	clear: both;
 	padding-bottom: $golden_major +em;
 	margin-bottom: 1em;
-	border-bottom: 2px solid;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
 
 	.avatar {
 		position: absolute;

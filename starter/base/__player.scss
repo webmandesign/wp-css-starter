@@ -79,7 +79,7 @@
 		padding: $golden +em;
 		margin: ( $golden +em ) 0;
 		background-color: invert( $color_mejs_bg );
-		border: 0;
+		border-width: 0;
 
 		.mejs-container {
 			width: 100% !important;

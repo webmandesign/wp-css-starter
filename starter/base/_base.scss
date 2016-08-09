@@ -39,7 +39,7 @@
 		clear: both;
 		height: 2px;
 		margin: ( power( 1 + $golden_minor, 2 ) +rem ) 0;
-		border: 0;
+		border-width: 0;
 	}
 
 	abbr[title],
@@ -68,15 +68,21 @@
 			#{$left}: percentage( $golden_major / 2 ); // {{RTL}}
 			top: 0;
 			pointer-events: none;
-			border-top: 1px solid; // thin longer border
-			border-bottom: 1px solid; // thin longer border
+			// thin longer border
+			border-top-width: 1px;
+			border-top-style: solid;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
 		}
 
 		&::after {
 			width: 2%;
 			#{$left}: 49%; // {{RTL}}
-			border-top: ( $golden_minor / 2 +em ) solid; // thick short border
-			border-bottom: ( $golden_minor / 2 +em ) solid; // thick short border
+			// thick short border
+			border-top-width: ( $golden_minor / 2 +em );
+			border-top-style: solid;
+			border-bottom-width: ( $golden_minor / 2 +em );
+			border-bottom-style: solid;
 		}
 
 		p {
@@ -95,7 +101,7 @@
 
 	cite {
 		@extend %font_style_normal;
-		border: 0;
+		border-width: 0;
 
 		&::before {
 			content: '\2014\2002';
@@ -158,7 +164,7 @@
 	}
 
 	iframe {
-		border: 0;
+		border-width: 0;
 		outline: 0;
 
 		&:focus {

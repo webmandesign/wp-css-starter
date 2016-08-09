@@ -28,8 +28,10 @@
 
 			li {
 				padding: ( $golden_minor +em ) 0;
-				border-top: 1px solid;
-				border-bottom: 1px solid;
+				border-top-width: 1px;
+				border-top-style: solid;
+				border-bottom-width: 1px;
+				border-bottom-style: solid;
 
 				+ li {
 					margin-top: -1px;
@@ -164,7 +166,8 @@
 				font-size: 1em !important;
 				background-color: transparent;
 				color: inherit;
-				border: 1px solid;
+				border-width: 1px;
+				border-style: solid;
 				z-index: 0;
 				transition: background .3s, color .3s, border .3s, opacity .3s;
 			}
@@ -202,7 +205,8 @@
 					top: -1px;
 					padding: ( $golden_minor / 2 +em ) ( $golden_major +em );
 					pointer-events: none;
-					border: 1px solid;
+					border-width: 1px;
+					border-style: solid;
 				}
 
 			}

@@ -122,7 +122,8 @@
 		.site & {
 			padding-top: $golden +em;
 			margin: ( $golden +em ) 0 0;
-			border-top: 2px solid;
+			border-top-width: 2px;
+			border-top-style: solid;
 
 			a {
 
@@ -223,7 +224,8 @@
 		padding: ( $golden +em ) 0 0;
 		margin: ( $golden +em ) 0 0;
 		font-size: 1rem;
-		border-top: 2px solid;
+		border-top-width: 2px;
+		border-top-style: solid;
 
 		.sd-social {
 
@@ -232,7 +234,8 @@
 				.share-count {
 					background: none;
 					color: inherit;
-					border: 1px solid;
+					border-width: 1px;
+					border-style: solid;
 				}
 
 			}
@@ -262,7 +265,7 @@
 							&:not(.no-text) {
 								padding: ( $golden_major +em ) 1em;
 								line-height: normal;
-								border: 0;
+								border-width: 0;
 								border-radius: 0;
 								cursor: pointer;
 								box-shadow: none;
