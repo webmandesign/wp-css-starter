@@ -119,21 +119,11 @@
 	q {
 
 		&::before {
-			content: '\201C';
-
-			[dir="rtl"] & {
-				content: '\201D';
-			}
-
+			@include rtl_property( content, '\201C', '\201D' ); // {{RTL}}
 		}
 
 		&::after {
-			content: '\201D';
-
-			[dir="rtl"] & {
-				content: '\201C';
-			}
-
+			@include rtl_property( content, '\201D', '\201C' ); // {{RTL}}
 		}
 
 	}

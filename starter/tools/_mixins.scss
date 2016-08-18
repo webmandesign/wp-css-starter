@@ -33,7 +33,7 @@
 // @param  string $property  What CSS property to use (if you set `max-$` the $width will be lowered by 1px)
 // @param  string $unit      Unit to use with the query (em by default, px breakpoint value will be converted)
 //
-@mixin responsive( $width: map_get( $breakpoint, "s" ), $property: 'min-width', $unit: 'em' ) {
+@mixin responsive( $width: map_get( $breakpoint, 's' ), $property: 'min-width', $unit: 'em' ) {
 
 	@if 'max' == str-slice( $property, 1, 3 ) {
 		$width: $width - 1;
@@ -66,7 +66,7 @@
 // @param  string $property_max  What CSS property to use for max
 // @param  string $unit          Unit to use with the query (em by default, px breakpoint value will be converted)
 //
-@mixin responsive_minmax( $min: map_get( $breakpoint, "s" ), $max: map_get( $breakpoint, "m" ), $property_min: 'min-width', $property_max: 'max-width', $unit: 'em' ) {
+@mixin responsive_minmax( $min: map_get( $breakpoint, 's' ), $max: map_get( $breakpoint, 'm' ), $property_min: 'min-width', $property_max: 'max-width', $unit: 'em' ) {
 
 	@if 'max' == str-slice( $property_min, 1, 3 ) {
 		$min: $min - 1;
