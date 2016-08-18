@@ -50,7 +50,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 // @license    GPL-3.0, http://www.gnu.org/licenses/gpl-3.0.html
 //
-// @version  3.4.6
+// @version  3.4.7
 //
 // @link  https://github.com/webmandesign/wp-css-starter
 // @link  http://www.webmandesign.eu
@@ -62,16 +62,16 @@
 
 // Imports
 
-	@import "tools/functions";
+	@import 'tools/functions';
 
-	@import "setup/variables";
+	@import 'setup/variables';
 
-	@import "tools/mixins";
+	@import 'tools/mixins';
 
-	@import "generic/generic";
+	@import 'generic/generic';
 
-	@import "base/base";
+	@import 'base/base';
 
-	@import "typography/typography";
+	@import 'typography/typography';
 
-	@import "content/content";
+	@import 'content/content';

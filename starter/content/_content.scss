@@ -10,22 +10,22 @@
 
 // Imports
 
-	@import "wp/wp";
+	@import 'wp/wp';
 
-	@import "forms/forms";
+	@import 'forms/forms';
 
-	@import "_base";
+	@import '_base';
 
-	@import "media/media";
+	@import 'media/media';
 
-	@import "formats/formats";
+	@import 'formats/formats';
 
-	@import "pagination/pagination";
+	@import 'pagination/pagination';
 
-	@import "meta/meta";
+	@import 'meta/meta';
 
-	@import "comments/comments";
+	@import 'comments/comments';
 
-	@import "sidebar/sidebar";
+	@import 'sidebar/sidebar';
 
-	@import "plugins/plugins";
+	@import 'plugins/plugins';
