@@ -37,8 +37,7 @@
 	pre,
 	pre code {
 		@extend %break_words_disable;
-		white-space: -moz-pre-wrap;
-		white-space:      pre-wrap; // http://css-tricks.com/almanac/properties/w/whitespace
+		white-space: pre-wrap; // http://css-tricks.com/almanac/properties/w/whitespace
 		line-height: 1.5;
 	}
 

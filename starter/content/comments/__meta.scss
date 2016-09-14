@@ -32,13 +32,20 @@
 }
 
 .comment-author {
-	float: $left; // {{RTL}}
+
+	@include responsive( map_get( $breakpoint, 'm' ) ) {
+		float: $left; // {{RTL}}
+	}
+
 }
 
 .comment-metadata {
 	@extend %font_size_small;
-	float: $right; // {{RTL}}
 	opacity: .66;
+
+	@include responsive( map_get( $breakpoint, 'm' ) ) {
+		float: $right; // {{RTL}}
+	}
 
 	.edit-link {
 		padding-#{$left}: $golden +em; // {{RTL}}
