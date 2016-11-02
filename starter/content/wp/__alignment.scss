@@ -57,26 +57,6 @@
 			width: percentage( $golden_minor );
 		}
 
-		&::after,
-		&::before {
-			width: 1px;
-			height: percentage( $golden_major );
-			top: percentage( $golden_minor / 2 );
-			border-width: 0;
-
-			// Reset the default blockquote style from `base/_base.scss` file
-			// Also making it LTR/RTL language neutral
-
-				left: auto;
-				right: auto;
-		}
-
-		&::after {
-			height: 6%;
-			top: 47%;
-			border-width: 0;
-		}
-
 	}
 
 	blockquote {
@@ -86,24 +66,6 @@
 			padding-left: 0;
 			margin-left: 0;
 			text-align: right;
-
-			&::after,
-			&::before {
-
-				// Thin long border
-
-					right: 0;
-					border-right-width: 1px;
-					border-right-style: solid;
-			}
-
-			&::after {
-
-				// Thick short border
-
-					border-right-width: $golden_minor / 2 +em;
-					border-right-style: solid;
-			}
 
 			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
 				margin-left: percentage( -$golden_minor / 4 );
@@ -115,24 +77,6 @@
 			@extend %pullquote;
 			padding-right: 0;
 			margin-right: 0;
-
-			&::after,
-			&::before {
-
-				// Thin long border
-
-					left: 0;
-					border-right-width: 1px;
-					border-right-style: solid;
-			}
-
-			&::after {
-
-				// Thick short border
-
-					border-left-width: $golden_minor / 2 +em;
-					border-left-style: solid;
-			}
 
 			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
 				margin-right: percentage( -$golden_minor / 4 );

@@ -70,14 +70,51 @@
 //
 @function px( $value, $base: 0 ) {
 
-	@if 0 < $base {
+	// Output
 
-		@return $value / $base +em
+		@if 0 < $base {
 
-	} @else {
+			@return $value / $base +em
 
-		@return $value / $font_size +rem
+		} @else {
 
-	}
+			@return $value / $font_size +rem
+
+		}
 
 } // /px
+
+
+
+//
+// Repeat CSS selectors several times
+//
+// @example
+//   .foo {
+//     @at-root #{ repeat_selector( &, 2 ) } {
+//       ...
+//     }
+//   }
+//
+// @param  int $selector The CSS selector to repeat
+// @param  int $multiply How many times to repeat the selector?
+//
+@function repeat_selector( $selector, $multiply: 1 ) {
+
+	// Helper variables
+
+		$output: '';
+
+
+	// Processing
+
+		@for $i from 1 through $multiply {
+			$output: $output + $selector;
+		}
+
+
+	// Output
+
+		@return $output;
+
+} // /repeat_selector
