@@ -50,7 +50,6 @@
 		margin-top: 0;
 		margin-left: 6%;
 		margin-right: 6%;
-		text-align: $left; // {{RTL}}
 		padding: 0 6%;
 
 		@include responsive( map_get( $breakpoint, 's' ) ) {
@@ -77,6 +76,7 @@
 			@extend %pullquote;
 			padding-right: 0;
 			margin-right: 0;
+			text-align: left;
 
 			@include responsive( map_get( $breakpoint, 'xxl' ) ) {
 				margin-right: percentage( -$golden_minor / 4 );
