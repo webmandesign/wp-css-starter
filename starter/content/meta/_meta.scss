@@ -52,8 +52,7 @@
 
 	}
 
-	.comments-link,
-	.entry-likes {
+	.comments-link {
 
 		a {
 
@@ -61,18 +60,6 @@
 				@extend %entry_meta_element_before;
 			}
 
-		}
-
-	}
-
-	.zilla-likes {
-
-		&,
-		&:hover,
-		&.active {
-			background: transparent;
-			margin: 0 !important;
-			padding-left: 0 !important;
 		}
 
 	}
@@ -89,10 +76,6 @@
 
 		}
 
-	}
-
-	.entry-edit {
-		font-variant: small-caps;
 	}
 
 }

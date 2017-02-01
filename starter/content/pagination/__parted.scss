@@ -36,8 +36,8 @@
 		line-height: 1 + $golden_minor;
 	}
 
-	.current,
-	.passed {
+	.is-current,
+	.is-passed {
 
 		a {
 			color: inherit;

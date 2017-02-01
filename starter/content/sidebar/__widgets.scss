@@ -120,15 +120,13 @@
 
 // Recent Comments widget
 // Recent Posts widget
-// ZillaLikes widget
 
 	ul {
 
 		li {
 
 			.widget_recent_comments &,
-			.widget_recent_entries &,
-			.widget_zilla_likes_widget & {
+			.widget_recent_entries & {
 				position: relative;
 				padding-#{$left}: $golden +em; // {{RTL}}
 			}
