@@ -126,14 +126,7 @@
 
 	// Supported post formats
 
-		$supported_post_formats: (
-
-			'image',
-			'link',
-			'quote',
-			'status'
-
-		) !default;
+		$supported_post_formats: () !default;
 
 
 

@@ -23,7 +23,6 @@
 			.posts & {
 
 				.entry-summary {
-					@extend %font_size_golden_minor;
 					@extend %no_margin;
 				}
 
@@ -46,8 +45,6 @@
 		.format-link {
 
 			.entry-content {
-				@extend %font_size_golden_minor;
-				@extend %line_height_golden_minor;
 
 				a {
 					@extend %font_weight_700;
@@ -108,8 +105,6 @@
 			cursor: help;
 
 			.entry-content {
-				@extend %font_size_golden_minor;
-				@extend %line_height_golden;
 
 				a {
 					@extend %font_weight_700;
