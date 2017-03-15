@@ -201,12 +201,18 @@
 	}
 
 	dl {
+		margin-top: 0;
 		margin-bottom: $golden +em;
 	}
 
 	dt {
 		@extend %font_weight_700;
 		margin-top: $golden_major +em;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
 	}
 
 	dd {

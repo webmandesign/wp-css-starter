@@ -34,3 +34,13 @@
 		}
 
 	}
+
+
+
+// Custom header video
+
+	// Fixing screen reader hidden div creating 1px gap at the bottom of HTML body
+	.wp-a11y-speak-region {
+		left: 0;
+		top: 0;
+	}
