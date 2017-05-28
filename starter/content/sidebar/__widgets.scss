@@ -157,27 +157,18 @@
 				position: relative;
 				display: inline-block;
 				width: auto;
-				padding: ( $golden_minor / 2 +em ) ( $golden_major +em );
+				padding: ( $golden_minor / 2 +rem ) ( $golden_major +rem );
 				margin: 2px 2px 0;
 				margin-#{$left}: 0; // {{RTL}}
 				white-space: nowrap;
-				font-size: 1em !important;
 				background-color: transparent;
 				color: inherit;
 				border-width: 1px;
 				border-style: solid;
 				z-index: 0;
-				transition: background .3s, color .3s, border .3s, opacity .3s;
-			}
-
-			&:hover,
-			&:focus,
-			&:active {
-
-				a {
-					opacity: .33;
-				}
-
+				transition: background .3s,
+				            color .3s,
+				            border .3s;
 			}
 
 			a {
@@ -186,25 +177,6 @@
 				&:focus,
 				&:active {
 					text-decoration: none;
-					z-index: 1;
-					opacity: 1;
-
-					&::before {
-						display: block;
-					}
-
-				}
-
-				&::before {
-					content: attr(title);
-					position: absolute;
-					display: none;
-					#{$left}: 100%; // {{RTL}}
-					top: -1px;
-					padding: ( $golden_minor / 2 +em ) ( $golden_major +em );
-					pointer-events: none;
-					border-width: 1px;
-					border-style: solid;
 				}
 
 			}
