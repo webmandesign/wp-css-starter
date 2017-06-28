@@ -33,9 +33,9 @@
 		padding: 0;
 		margin: 0;
 
-		&:hover,
-		&:active,
-		&:focus {
+		&.skip-link:hover,
+		&.skip-link:active,
+		&.skip-link:focus {
 			clip: auto !important;
 			display: block;
 			width: auto;
