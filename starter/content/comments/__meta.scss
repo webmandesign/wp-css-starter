@@ -41,7 +41,6 @@
 
 .comment-metadata {
 	@extend %font_size_small;
-	opacity: .66;
 
 	@include responsive( map_get( $breakpoint, 'm' ) ) {
 		float: $right; // {{RTL}}

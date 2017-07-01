@@ -32,11 +32,9 @@
 		padding: ( $golden_major +em ) 1em;
 		line-height: normal;
 		cursor: pointer;
-		transition: opacity .3s;
 
 		&:hover {
 			text-decoration: none;
-			opacity: .75;
 		}
 
 	}

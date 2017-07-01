@@ -31,7 +31,6 @@
 
 	&-element {
 		margin-#{$right}: $golden_minor +em; // {{RTL}}
-		opacity: .66;
 
 		.single & {
 			margin-#{$right}: 1em; // {{RTL}}

@@ -23,21 +23,9 @@
 		vertical-align: top;
 	}
 
-	a {
-		opacity: .66;
-	}
-
-	> span,
-	a:active,
-	a:hover,
-	.current {
-		opacity: 1;
-	}
-
 	.prev,
 	.next {
 		display: inline-block;
-		opacity: 1;
 	}
 
 	> span.dots,

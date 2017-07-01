@@ -20,7 +20,6 @@
 	}
 
 	.sep {
-		opacity: .66;
 
 		@include responsive( map_get( $breakpoint, 'm' ) ) {
 			margin: 0 ( $golden_major +em );
