@@ -180,24 +180,6 @@
 
 	}
 
-	ol {
-
-		ol {
-			list-style: upper-alpha;
-
-			ol {
-				list-style: upper-roman;
-
-				ol {
-					list-style: lower-alpha;
-				}
-
-			}
-
-		}
-
-	}
-
 	dl {
 		margin-top: 0;
 		margin-bottom: $golden +em;
