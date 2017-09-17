@@ -246,7 +246,9 @@
 
 
 //
-// :hover, :active, :focus states (and :link, optionally)
+// :hover, :active, :focus states
+//
+// You can optionally use :link and &.
 //
 // @param  string $state
 //
@@ -261,6 +263,8 @@
 			$selectors: append( $selectors, '&:active', comma );
 		} @else if 'l' == $state {
 			$selectors: append( $selectors, '&:link', comma );
+		} @else if '&' == $state {
+			$selectors: append( $selectors, '&', comma );
 		} @else {
 			$selectors: append( $selectors, '&:hover', comma );
 		}
