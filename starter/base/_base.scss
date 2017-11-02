@@ -141,7 +141,8 @@
 		ins &,
 		.highlight &,
 		.form-allowed-tags &,
-		.taxonomy-description & {
+		.taxonomy-description &,
+		.archive-description & {
 			display: inline;
 			padding: 0 ( $golden_minor +em );
 			background: none;
@@ -228,7 +229,5 @@
 	@import '_classes';
 
 	@import '_clearing';
-
-	@import '_player';
 
 	@import '_breakpoints';
