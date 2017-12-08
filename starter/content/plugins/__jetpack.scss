@@ -184,13 +184,13 @@
 						display: none;
 						width: 100%;
 
-						@include responsive( map_get( $breakpoint, 'm' ) ) {
+						@include media( map_get( $breakpoint, 'm' ) ) {
 							display: block;
 						}
 
 					}
 
-					@include responsive( map_get( $breakpoint, 'm' ) ) {
+					@include media( map_get( $breakpoint, 'm' ) ) {
 						$columns: 3;
 						$gutter: 2; // %
 						width: percentage( ( ( 100 + $gutter ) / $columns - $gutter ) / 100 );

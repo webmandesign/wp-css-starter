@@ -46,7 +46,7 @@
 
 			}
 
-			@include responsive( map_get( $breakpoint, 'm' ) ) {
+			@include media( map_get( $breakpoint, 'm' ) ) {
 				$columns: 3; // Default layout on medium devices.
 				width: percentage( ( 100 / $columns - $gutter ) / 100 );
 
@@ -57,7 +57,7 @@
 
 			}
 
-			@include responsive( map_get( $breakpoint, 'l' ) ) {
+			@include media( map_get( $breakpoint, 'l' ) ) {
 
 				@for $i from 3 through 9 {
 
