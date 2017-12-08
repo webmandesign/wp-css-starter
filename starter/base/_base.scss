@@ -46,13 +46,7 @@
 	}
 
 	blockquote {
-		@extend %font_size_golden_minor;
-		@extend %font_weight_300;
-		@extend %line_height_golden_minor;
 		clear: both;
-		position: relative;
-		padding: 1em 0;
-		margin: ( $golden +em ) 0;
 
 		p {
 			margin-bottom: 1em;

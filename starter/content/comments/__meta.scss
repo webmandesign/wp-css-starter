@@ -9,12 +9,12 @@
 
 
 .comment-meta {
-	@extend .overflow-hidden;
 	clear: both;
 	padding-bottom: $golden_major +em;
 	margin-bottom: 1em;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
+	overflow: hidden;
 
 	.avatar {
 		display: block;

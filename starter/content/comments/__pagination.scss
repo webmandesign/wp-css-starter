@@ -9,11 +9,11 @@
 
 
 .comment-navigation {
-	@extend .overflow-hidden;
 	display: block;
 	position: relative;
 	clear: both;
 	padding: ( $golden +em ) 0;
+	overflow: hidden;
 
 	div {
 		padding: 1em 0 0;
