@@ -139,6 +139,13 @@
 
 			) !default;
 
+	// Supported editor features
+
+		$supported_editor_features: (
+			'align-full',
+			'align-wide',
+		) !default;
+
 	// Supported post formats
 
 		$supported_post_formats: () !default;

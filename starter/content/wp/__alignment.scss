@@ -8,78 +8,55 @@
 
 
 
-// Basic alignments
+.alignleft,
+.wp-caption.alignleft,
+img.alignleft {
+	float: left;
+	margin-right: 6%;
+	margin-bottom: 1em;
+}
 
-	.alignleft,
-	.wp-caption.alignleft,
-	img.alignleft {
-		float: left;
-		margin-right: 6%;
-		margin-bottom: 1em;
+.alignright,
+.wp-caption.alignright,
+img.alignright {
+	float: right;
+	margin-left: 6%;
+	margin-bottom: 1em;
+}
+
+.aligncenter,
+.wp-caption.aligncenter,
+img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignnone,
+img.alignnone {
+	margin: 0;
+}
+
+%alignfull_starter {
+	width: 100vw;
+	margin-left: 50%;
+	transform: translateX( -50% );
+}
+
+@if ( index( $supported_editor_features, 'align-full' ) ) {
+
+	.alignfull {
+		@extend %alignfull_starter;
 	}
 
-	.alignright,
-	.wp-caption.alignright,
-	img.alignright {
-		float: right;
-		margin-left: 6%;
-		margin-bottom: 1em;
+}
+
+@if ( index( $supported_editor_features, 'align-wide' ) ) {
+
+	.alignwide {
+		@extend %alignfull_starter;
+		width: 75rem; // Should be overridden in theme stylesheet!
+		max-width: 92vw;
 	}
 
-	.aligncenter,
-	.wp-caption.aligncenter,
-	img.aligncenter {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.alignnone,
-	img.alignnone {
-		margin: 0;
-	}
-
-
-
-// Pullquotes
-
-	%pullquote {
-		clear: none;
-		width: 50%;
-		padding: 0 6%;
-		margin-left: 6%;
-		margin-right: 6%;
-
-		@include media( map_get( $breakpoint, 's' ) ) {
-			width: percentage( $golden_minor );
-		}
-
-	}
-
-	blockquote {
-
-		&.alignleft {
-			@extend %pullquote;
-			padding-left: 0;
-			margin-left: 0;
-			text-align: right;
-
-			@include media( map_get( $breakpoint, 'xxl' ) ) {
-				margin-left: percentage( -$golden_minor / 4 );
-			}
-
-		}
-
-		&.alignright {
-			@extend %pullquote;
-			padding-right: 0;
-			margin-right: 0;
-			text-align: left;
-
-			@include media( map_get( $breakpoint, 'xxl' ) ) {
-				margin-right: percentage( -$golden_minor / 4 );
-			}
-
-		}
-
-	}
+}
