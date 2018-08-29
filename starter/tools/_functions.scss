@@ -26,7 +26,7 @@
 //
 @function power( $base, $exp: 1 ) {
 
-	// Helper variables
+	// Variables
 
 		$output: 1;
 
@@ -93,7 +93,7 @@
 //
 @function repeat_selector( $selector, $multiply: 1 ) {
 
-	// Helper variables
+	// Variables
 
 		$output: '';
 
