@@ -14,7 +14,7 @@
 	a,
 	span {
 		display: none;
-		width: power( $golden, 2 ) +em;
+		width: pow( $golden, 2 ) +em;
 		padding: ( $golden_major +em ) 0;
 		margin: $golden_minor / 2 +em;
 		margin-#{$left}: 0; // {{RTL}}

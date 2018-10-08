@@ -8,55 +8,24 @@
 
 
 
-.alignleft,
-.wp-caption.alignleft,
-img.alignleft {
+.alignleft {
 	float: left;
 	margin-right: 6%;
 	margin-bottom: 1em;
 }
 
-.alignright,
-.wp-caption.alignright,
-img.alignright {
+.alignright {
 	float: right;
 	margin-left: 6%;
 	margin-bottom: 1em;
 }
 
-.aligncenter,
-.wp-caption.aligncenter,
-img.aligncenter {
+.aligncenter {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.alignnone,
-img.alignnone {
+.alignnone {
 	margin: 0;
-}
-
-%alignfull_starter {
-	width: 100vw;
-	margin-left: 50%;
-	transform: translateX( -50% );
-}
-
-@if ( index( $supported_editor_features, 'align-full' ) ) {
-
-	.alignfull {
-		@extend %alignfull_starter;
-	}
-
-}
-
-@if ( index( $supported_editor_features, 'align-wide' ) ) {
-
-	.alignwide {
-		@extend %alignfull_starter;
-		width: 75rem; // Should be overridden in theme stylesheet!
-		max-width: 92vw;
-	}
-
 }

@@ -16,8 +16,8 @@
 		height: 1px;
 		line-height: 1px;
 		word-wrap: normal !important;
-		clip-path: inset( 50% );
 		clip: rect( 1px, 1px, 1px, 1px );
+		clip-path: inset( 50% );
 		overflow: hidden;
 	}
 
@@ -71,6 +71,11 @@
 			text-align: center;
 		}
 
+	}
+
+	// Do not show the outline on the skip link target.
+	#content[tabindex="-1"]:focus {
+		outline: 0;
 	}
 
 

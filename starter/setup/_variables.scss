@@ -20,6 +20,12 @@
 // Globals
 //
 
+	// Preferred unit type in media queries, widths,...
+	//
+	// "absolute" (px, pt) vs "relative" (em, rem, %)
+
+		$preferred_units: absolute !default;
+
 	// RTL support
 	//
 	// There are `{{RTL}}` notes left in the code where change is applicable.
@@ -37,9 +43,9 @@
 
 		// (Rounding to nearest hundredth to prevent calculation issues between browsers.)
 
-		$golden:       1.62 !default;
-		$golden_major: 0.62 !default;
-		$golden_minor: 0.38 !default;
+		$golden:       1.618 !default;
+		$golden_major: 0.618 !default;
+		$golden_minor: 0.382 !default;
 
 	// Responsive breakpoints (in px)
 
@@ -59,8 +65,8 @@
 
 		$font_size: 16 !default;
 
-		$typography_line_height: 1.62;
-		$typography_margin_bottom: 1.62;
+		$typography_line_height: 1.618;
+		$typography_margin_bottom: 1.618;
 
 		// Headings
 
@@ -97,54 +103,47 @@
 
 				$h_tags_1 : (
 					2.618,
-					1.19,
-					( 4 * $typography_line_height - 2.618 * 1.19 - $typography_margin_bottom ) / 2.618,
-					$typography_margin_bottom / 2.618 / 1.19
+					1.191,
+					( 4 * $typography_line_height - 2.618 * 1.191 - $typography_margin_bottom ) / 2.618,
+					$typography_margin_bottom / 2.618 / 1.191
 				),
 
 				$h_tags_2 : (
 					2.058,
-					1.19,
-					( 4 * $typography_line_height - 2.058 * 1.19 - $typography_margin_bottom ) / 2.058,
-					$typography_margin_bottom / 2.058 / 1.19
+					1.191,
+					( 4 * $typography_line_height - 2.058 * 1.191 - $typography_margin_bottom ) / 2.058,
+					$typography_margin_bottom / 2.058 / 1.191
 				),
 
 				$h_tags_3 : (
 					1.618,
-					1.38,
-					( 3 * $typography_line_height - 1.618 * 1.38 - $typography_margin_bottom ) / 1.618,
-					$typography_margin_bottom / 1.618 / 1.38
+					1.382,
+					( 3 * $typography_line_height - 1.618 * 1.382 - $typography_margin_bottom ) / 1.618,
+					$typography_margin_bottom / 1.618 / 1.382
 				),
 
 				$h_tags_4 : (
 					1.272,
-					( 1.62 / 1.272 ),
-					( 3 * $typography_line_height - 1.272 * ( 1.62 / 1.272 ) - $typography_margin_bottom ) / 1.272,
-					$typography_margin_bottom / 1.272 / ( 1.62 / 1.272 )
+					( 1.618 / 1.272 ),
+					( 3 * $typography_line_height - 1.272 * ( 1.618 / 1.272 ) - $typography_margin_bottom ) / 1.272,
+					$typography_margin_bottom / 1.272 / ( 1.618 / 1.272 )
 				),
 
 				$h_tags_5 : (
 					1.272,
-					( 1.62 / 1.272 ),
-					( 3 * $typography_line_height - 1.272 * ( 1.62 / 1.272 ) - $typography_margin_bottom ) / 1.272,
-					$typography_margin_bottom / 1.272 / ( 1.62 / 1.272 )
+					( 1.618 / 1.272 ),
+					( 3 * $typography_line_height - 1.272 * ( 1.618 / 1.272 ) - $typography_margin_bottom ) / 1.272,
+					$typography_margin_bottom / 1.272 / ( 1.618 / 1.272 )
 				),
 
 				$h_tags_6 : (
 					1.272,
-					( 1.62 / 1.272 ),
-					( 3 * $typography_line_height - 1.272 * ( 1.62 / 1.272 ) - $typography_margin_bottom ) / 1.272,
-					$typography_margin_bottom / 1.272 / ( 1.62 / 1.272 )
+					( 1.618 / 1.272 ),
+					( 3 * $typography_line_height - 1.272 * ( 1.618 / 1.272 ) - $typography_margin_bottom ) / 1.272,
+					$typography_margin_bottom / 1.272 / ( 1.618 / 1.272 )
 				),
 
 			) !default;
-
-	// Supported editor features
-
-		$supported_editor_features: (
-			'align-full',
-			'align-wide',
-		) !default;
 
 	// Supported post formats
 

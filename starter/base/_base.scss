@@ -21,21 +21,16 @@
 
 	a {
 		@extend %break_words;
+	}
 
-		&:hover {}
-
-		&:focus {
-			outline: thin dashed;
-		}
-
-		&:visited {}
-
+	:focus {
+		outline: thin dashed;
 	}
 
 	hr {
 		clear: both;
 		height: 2px;
-		margin: ( power( 1 + $golden_minor, 2 ) +rem ) 0;
+		margin: ( pow( 1 + $golden_minor, 2 ) +rem ) 0;
 		border-width: 0;
 	}
 
@@ -67,7 +62,7 @@
 		border-width: 0;
 
 		&::before {
-			content: '\2014\2002';
+			content: '\2014\2002'; // em dash + en space
 		}
 
 		blockquote & {
@@ -82,11 +77,16 @@
 	q {
 
 		&::before {
-			@include rtl_property( content, '\201C', '\201D' ); // {{RTL}}
+			content: open-quote;
 		}
 
 		&::after {
-			@include rtl_property( content, '\201D', '\201C' ); // {{RTL}}
+			content: close-quote;
+		}
+
+		&::before,
+		&::after {
+			display: inline-block; // Required for correct RTL display. // {{RTL}}
 		}
 
 	}

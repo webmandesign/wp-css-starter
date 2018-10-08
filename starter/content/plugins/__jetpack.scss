@@ -55,7 +55,7 @@
 		.posts {
 
 			&.masonry {
-				margin-bottom: power( $golden, 3 ) +rem;
+				margin-bottom: pow( $golden, 3 ) +rem;
 			}
 
 		}
@@ -69,7 +69,7 @@
 		.masonry & {
 			position: absolute;
 			width: 100%;
-			bottom: power( $golden, 3 ) * -1rem;
+			bottom: pow( $golden, 3 ) * -1rem;
 		}
 
 		.site & {
@@ -92,7 +92,7 @@
 		.masonry & {
 			position: absolute;
 			width: 100%;
-			bottom: power( $golden, 3 ) * -1rem; // -4.235
+			bottom: pow( $golden, 3 ) * -1rem; // -4.235
 		}
 
 		.spinner {
@@ -369,7 +369,7 @@
 				}
 
 				.widgets-list-layout-blavatar {
-					width: power( $golden, 2 ) +em;
+					width: pow( $golden, 2 ) +em;
 					margin-#{$right}: 1em; // {{RTL}}
 				}
 

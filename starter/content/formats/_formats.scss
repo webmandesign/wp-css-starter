@@ -8,58 +8,10 @@
 
 
 
-// Link
-@if ( index( $supported_post_formats, 'link' ) ) {
+// Imports
 
-	.format-link {
+	@import '_link';
 
-		.entry-content {
+	@import '_quote';
 
-			a {
-				font-weight: bolder;
-			}
-
-		}
-
-	}
-
-}
-
-
-
-// Quote
-@if ( index( $supported_post_formats, 'quote' ) ) {
-
-	.format-quote {
-
-		.entry-content {
-
-			a {
-				font-weight: bolder;
-			}
-
-		}
-
-	}
-
-}
-
-
-
-// Status
-@if ( index( $supported_post_formats, 'status' ) ) {
-
-	.format-status {
-		cursor: help;
-
-		.entry-content {
-
-			a {
-				font-weight: bolder;
-			}
-
-		}
-
-	}
-
-}
+	@import '_status';

@@ -21,7 +21,7 @@
 
 
 //
-// Universal Responsive media query
+// Universal Responsive media query.
 //
 // This is the default media query for `only screen`
 // and using `and` as logical conjunction.
@@ -117,46 +117,8 @@
 
 
 
-	// Legacy, backwards compatibility
-
-		@mixin responsive(
-				$width: map_get( $breakpoint, 's' ),
-				$property: 'min-width',
-				$unit: em
-			) {
-				@if ( em != $unit ) {
-					$width : $width + $unit;
-				}
-				@include media(
-					( $width, $property )
-				) {
-					@content
-				}
-		} // /responsive
-
-		@mixin responsive_minmax(
-				$min: map_get( $breakpoint, 's' ),
-				$max: map_get( $breakpoint, 'm' ),
-				$property_min: 'min-width',
-				$property_max: 'max-width',
-				$unit: em
-			) {
-				@if ( em != $unit ) {
-					$min : $min + $unit;
-					$max : $max + $unit;
-				}
-				@include media(
-					( $min, $property_min ),
-					( $max, $property_max )
-				) {
-					@content
-				}
-		} // /responsive_minmax
-
-
-
 //
-// Output heading tags styles
+// Output heading tags styles.
 //
 // @param  num  $multiplier    Alter heading maps values
 // @param  bool $global_styles Whether to output the heading tags global styles (these don't according the $multiplier)
@@ -223,7 +185,7 @@
 
 
 //
-// Context
+// Context.
 //
 // @link  https://www.youtube.com/watch?v=o4ok4gsiQSw
 //
@@ -245,7 +207,7 @@
 
 
 //
-// Selectors for container with specific number of children
+// Selectors for container with specific number of children.
 //
 // @link  http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/
 //
@@ -284,7 +246,7 @@
 
 
 //
-// LTR/RTL property value
+// LTR/RTL property value.
 //
 // @param  string $property
 // @param  string $value_ltr
@@ -303,7 +265,7 @@
 
 
 //
-// :hover, :active, :focus states
+// :hover, :active, :focus states.
 //
 // You can optionally use :link and &.
 //
