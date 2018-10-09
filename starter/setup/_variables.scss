@@ -36,6 +36,16 @@
 			$right: left;
 		}
 
+	// Blocks support.
+
+		$supported_blocks: (
+			'code',
+			'drop-cap',
+			'latest-comments',
+			'pullquote',
+			'verse',
+		) !default;
+
 	// Post Formats support.
 
 		$supported_post_formats: (

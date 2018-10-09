@@ -1,0 +1,36 @@
+/* FILE: starter/wp/blocks/__latest-comments.scss */
+
+//
+// Latest Comments
+//
+
+
+
+
+
+@if ( index( $supported_blocks, 'latest-comments' ) ) {
+
+	.wp-block-latest-comments {
+		margin-left: 0;
+		margin-right: 0;
+		border-top-width: $golden_minor +em;
+		border-top-style: solid;
+		border-bottom-width: $golden_minor +em;
+		border-bottom-style: solid;
+
+		&__comment {
+			padding: $golden +em;
+			margin: 0;
+			font-size: inherit;
+			line-height: inherit;
+
+			&:not(:first-child) {
+				border-top-width: 1px;
+				border-top-style: solid;
+			}
+
+		}
+
+	}
+
+}
