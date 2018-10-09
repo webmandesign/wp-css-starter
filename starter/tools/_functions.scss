@@ -11,6 +11,9 @@
 //
 // Power math function.
 //
+// @since    1.0.0
+// @version  5.0.0
+//
 // @param  num $base
 // @param  int $exp
 //
@@ -43,6 +46,9 @@
 //
 // Convert px value to rem or em.
 //
+// @since    1.0.0
+// @version  5.0.0
+//
 // @param  int $value           Value of px to convert.
 // @param  int $base_font_size  If set, the output is in em relative to this base (font-size) value.
 //
@@ -62,6 +68,9 @@
 
 //
 // Repeat CSS selectors several times.
+//
+// @since    1.0.0
+// @version  5.0.0
 //
 // @example
 //   .foo {

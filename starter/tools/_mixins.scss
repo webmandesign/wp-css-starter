@@ -23,12 +23,14 @@
 //
 // Universal Responsive media query.
 //
-// This is the default media query for `only screen`
-// and using `and` as logical conjunction.
+// IMPORTANT:
+// When using LibSass for SCSS compiling (with Prepros it's called "Node Sass"),
+// double check if media queries with multiple list parameters passed to this
+// mixin were processed correctly. If not, try not to use LibSass.
 //
 // @example
 // 	@include media(
-// 		1600,                     // -> 'and (min-width: 100em)'
+// 		1600,                     // -> 'and (min-width: 100em)' (or 1600px, depending on $preferred_units value)
 // 		1600px,                   // -> 'and (min-width: 1600px)'
 // 		( 1600,   'min-height' ), // -> 'and (min-height: 100em)'
 // 		( 1600px, 'min-height' ), // -> 'and (min-height: 1600px)'
@@ -38,11 +40,8 @@
 // 		$content;
 // 	}
 //
-// IMPORTANT:
-// Do not use LibSass when compiling SCSS files (with Prepros) as it seems
-// not to be able to handle lists as mixin parameters!
-//
-// @since  4.0.0
+// @since    4.0.0
+// @version  5.0.0
 //
 // @param  lists $queries  Media query condition lists (arrays).
 //
@@ -86,8 +85,13 @@
 						$query_value : $query_value - 1;
 					}
 
-					// Convert query value to ems.
-					$query_value : $query_value / 16 +em;
+					@if ( relative == $preferred_units ) {
+						// Convert to ems.
+						$query_value : $query_value / 16 +em;
+					} @else {
+						// Default to pixels.
+						$query_value : $query_value +px;
+					}
 
 					$query : set-nth( $query, 1, $query_value );
 
@@ -95,18 +99,16 @@
 
 			// Add to output
 
-				$output : $output
-					+ ' and ('
-					+ nth( $query, 2 )
-					+ ': '
-					+ nth( $query, 1 )
-					+ ')';
+				@if ( 0 < str-length( $output ) ) {
+					$output : $output + ' and ';
+				}
+				$output : $output + '(' + nth( $query, 2 ) + ': ' + nth( $query, 1 ) + ')';
 
 		}
 	}
 
 	@if ( 0 < str-length( $output ) ) {
-		@media #{ 'only screen' + $output } {
+		@media #{ $output } {
 			@content
 		}
 	} @else {
@@ -119,6 +121,9 @@
 
 //
 // Output heading tags styles.
+//
+// @since    1.0.0
+// @version  5.0.0
 //
 // @param  num  $multiplier    Alter heading maps values
 // @param  bool $global_styles Whether to output the heading tags global styles (these don't according the $multiplier)
@@ -189,6 +194,9 @@
 //
 // @link  https://www.youtube.com/watch?v=o4ok4gsiQSw
 //
+// @since    1.0.0
+// @version  5.0.0
+//
 // @param  string $replace
 // @param  string $withs
 //
@@ -211,10 +219,6 @@
 //
 // @link  http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/
 //
-// @param  string $selector A child selector.
-// @param  int    $count    Number of children in container.
-// @param  int    $min      Optional starting number of children in container.
-//
 // IMPORTANT (for LibSass)!
 // ========================
 //
@@ -228,6 +232,13 @@
 //
 // On the other hand, we have to use LibSass to prevent more complicated issues with line breaks
 // in nested selectors...
+//
+// @since    1.0.0
+// @version  5.0.0
+//
+// @param  string $selector A child selector.
+// @param  int    $count    Number of children in container.
+// @param  int    $min      Optional starting number of children in container.
 //
 @mixin children( $selector, $count: 2, $min: 1 ) {
 
@@ -247,6 +258,9 @@
 
 //
 // LTR/RTL property value.
+//
+// @since    1.0.0
+// @version  5.0.0
 //
 // @param  string $property
 // @param  string $value_ltr
@@ -268,6 +282,9 @@
 // :hover, :active, :focus states.
 //
 // You can optionally use :link and &.
+//
+// @since    1.0.0
+// @version  5.0.0
 //
 // @param  string $state
 //
