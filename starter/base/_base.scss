@@ -10,18 +10,20 @@
 
 // HTML elements
 
-	@if rtl == $language_direction {
-
-		body {
-			direction: rtl;
-			unicode-bidi: embed;
-		}
-
-	}
-
 	a {
 		@extend %break_words;
 	}
+
+		[href^="tel"] {
+			white-space: nowrap;
+
+			@include media( map_get( $breakpoint, 'm' ) ) {
+				pointer-events: none;
+				text-decoration: none;
+				color: inherit;
+			}
+
+		}
 
 	:focus {
 		outline: thin dashed;
@@ -30,12 +32,13 @@
 	hr {
 		clear: both;
 		height: 2px;
-		margin: ( pow( 1 + $golden_minor, 2 ) +rem ) 0;
+		margin: ( pow( 1 + $golden_minor, 2 ) +em ) 0;
 		border-width: 0;
 	}
 
 	abbr[title],
-	acronym[title] {
+	acronym[title],
+	dfn {
 		cursor: help;
 		text-decoration: none;
 	}
@@ -105,13 +108,27 @@
 		color: inherit;
 	}
 
+	figure {
+		margin: 0;
+	}
+
 	img,
-	iframe {
-		vertical-align: middle;
+	video,
+	audio,
+	iframe,
+	embed,
+	object {
+		max-width: 100%;
+		height: auto;
 	}
 
 	img {
-		height: auto;
+		@extend %font_style_italic;
+	}
+
+	img,
+	iframe {
+		vertical-align: middle;
 	}
 
 	iframe {
@@ -119,7 +136,7 @@
 		outline: 0;
 
 		&:focus {
-			outline: thin dotted;
+			outline: thin dashed;
 		}
 
 	}
@@ -155,22 +172,31 @@
 		tab-size: 2;
 	}
 
-	small,
-	.small {
+	small {
 		@extend %font_size_small;
 	}
 
-	ul, ol {
-		margin-top: 0;
-		margin-bottom: 1em;
-		margin-#{$left}: $golden_minor + 1em; // {{RTL}}
-		margin-#{$right}: 0; // {{RTL}}
+	menu,
+	ul,
+	ol {
+		padding: 0;
+		margin: 0;
+	}
 
-		li > & {
-			margin-bottom: 0;
+		ul,
+		ol {
+			margin-#{$left}: $golden_minor + 1em; // {{RTL}}
+			margin-bottom: 1em;
+
+			li > & {
+				margin-bottom: 0;
+			}
+
 		}
 
-	}
+		ul {
+			list-style: disc;
+		}
 
 	dl {
 		margin-top: 0;
@@ -189,6 +215,40 @@
 
 	dd {
 		margin-#{$left}: $golden +em; // {{RTL}}
+	}
+
+	table {
+		@extend %line_height_golden_minor;
+		width: 100%;
+		margin: 0 0 ( $golden +em );
+		border-width: 2px;
+		border-style: solid;
+	}
+
+		caption {
+			@extend %font_style_italic;
+			padding: 1em 0;
+			text-align: $left; // {{RTL}}
+			caption-side: bottom;
+		}
+
+		th,
+		td {
+			padding: ( $golden_major +em ) 1em;
+			border-width: 1px;
+			border-style: solid;
+			vertical-align: top;
+		}
+
+		th,
+		tfoot td {
+			@extend %font_weight_700;
+			text-align: $left; // {{RTL}}
+			border-width: 2px;
+		}
+
+	svg {
+		fill: currentColor;
 	}
 
 
@@ -217,8 +277,6 @@
 
 
 // Imports
-
-	@import '_table';
 
 	@import '_classes';
 
