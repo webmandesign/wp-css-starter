@@ -109,26 +109,27 @@
 	}
 
 	figure {
-		margin: 0;
+		margin: 0 0 ( $golden +em );
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 	}
 
-	img,
-	video,
 	audio,
-	iframe,
 	embed,
-	object {
+	iframe,
+	img,
+	object,
+	video {
 		max-width: 100%;
-		height: auto;
+		vertical-align: middle;
 	}
 
 	img {
 		@extend %font_style_italic;
-	}
-
-	img,
-	iframe {
-		vertical-align: middle;
+		height: auto;
 	}
 
 	iframe {

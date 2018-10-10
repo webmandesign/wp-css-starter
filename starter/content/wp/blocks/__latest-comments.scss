@@ -11,24 +11,10 @@
 @if ( index( $supported_blocks, 'latest-comments' ) ) {
 
 	.wp-block-latest-comments {
-		margin-left: 0;
-		margin-right: 0;
-		border-top-width: $golden_minor +em;
-		border-top-style: solid;
-		border-bottom-width: $golden_minor +em;
-		border-bottom-style: solid;
+		@extend %block_list_items;
 
 		&__comment {
-			padding: $golden +em;
-			margin: 0;
-			font-size: inherit;
-			line-height: inherit;
-
-			&:not(:first-child) {
-				border-top-width: 1px;
-				border-top-style: solid;
-			}
-
+			@extend %block_list_items_child;
 		}
 
 	}

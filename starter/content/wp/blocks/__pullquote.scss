@@ -52,23 +52,21 @@
 
 	.wp-block-pullquote {
 		padding: 0;
-
-		&:not(:last-child) {
-			margin-bottom: $golden +em;
-		}
+		text-align: inherit;
 
 		&,
 		&.alignleft,
 		&.alignright {
 
-			blockquote {
-				text-align: inherit;
-			}
-
 			p {
 				font-size: inherit;
 			}
 
+		}
+
+		&.alignfull {
+			padding-left: 2em;
+			padding-right: 2em;
 		}
 
 	}

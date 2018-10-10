@@ -39,10 +39,17 @@
 	// Blocks support.
 
 		$supported_blocks: (
+			'archives',
+			'audio',
+			'button',
+			'categories',
 			'code',
+			'columns',
 			'drop-cap',
 			'latest-comments',
+			'latest-posts',
 			'pullquote',
+			'spacer',
 			'verse',
 		) !default;
 
