@@ -11,23 +11,27 @@
 @if ( index( $supported_blocks, 'pullquote' ) ) {
 
 	%pullquote {
-		clear: none;
-		width: 50%;
-		padding: 0;
-		margin-left: 6%;
-		margin-right: 6%;
+		padding: ( $golden +em ) 0;
+		text-align: inherit;
+		border-top-width: $golden_minor +em;
+		border-top-style: solid;
+		border-bottom-width: $golden_minor +em;
+		border-bottom-style: solid;
 
-		@include media( map_get( $breakpoint, 's' ) ) {
-			width: percentage( $golden_minor );
+		&.alignleft,
+		&.alignright {
+			clear: none;
+			width: 50%;
+			margin-left: 6%;
+			margin-right: 6%;
+
+			@include media( map_get( $breakpoint, 's' ) ) {
+				width: percentage( $golden_minor );
+			}
+
 		}
 
-	}
-
-	blockquote,
-	.wp-block-pullquote {
-
 		&.alignleft {
-			@extend %pullquote;
 			margin-left: 0;
 			text-align: right;
 
@@ -38,7 +42,6 @@
 		}
 
 		&.alignright {
-			@extend %pullquote;
 			margin-right: 0;
 			text-align: left;
 
@@ -51,8 +54,7 @@
 	}
 
 	.wp-block-pullquote {
-		padding: 0;
-		text-align: inherit;
+		@extend %pullquote;
 
 		&,
 		&.alignleft,
@@ -65,8 +67,28 @@
 		}
 
 		&.alignfull {
-			padding-left: 2em;
-			padding-right: 2em;
+			padding-left: $golden +em;
+			padding-right: $golden +em;
+
+			@include media( map_get( $breakpoint, 'l' ) ) {
+				padding-left: pow( $golden, 2 ) +em;
+				padding-right: pow( $golden, 2 ) +em;
+			}
+
+		}
+
+		&.is-style-solid-color {
+			padding: $golden +em;
+			border-width: 0;
+
+			@include media( map_get( $breakpoint, 'l' ) ) {
+				padding: pow( $golden, 2 ) +em;
+			}
+
+			blockquote {
+				max-width: 32em;
+			}
+
 		}
 
 	}

@@ -29,6 +29,10 @@
 		outline: thin dashed;
 	}
 
+		body:focus {
+			outline: none;
+		}
+
 	hr {
 		clear: both;
 		height: 2px;
