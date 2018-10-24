@@ -1,16 +1,16 @@
-/* FILE: starter/wp/blocks/__cover-image.scss */
+/* FILE: starter/wp/blocks/__cover.scss */
 
 //
-// Cover Image
+// Cover
 //
 
 
 
 
 
-@if ( index( $supported_blocks, 'cover-image' ) ) {
+@if ( index( $supported_blocks, 'cover' ) ) {
 
-	.wp-block-cover-image {
+	.wp-block-cover {
 		min-height: $golden_major * 100vh;
 		padding: 2em 10%;
 
