@@ -172,7 +172,7 @@
 		position: relative;
 		max-width: 100%;
 		padding: 1em;
-		margin-bottom: $golden +em;
+		margin: 0 0 ( $golden +em );
 		overflow: auto;
 		tab-size: 2;
 	}
