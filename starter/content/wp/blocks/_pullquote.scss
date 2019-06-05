@@ -13,7 +13,8 @@
 		&.alignleft,
 		&.alignright {
 			clear: none;
-			width: 50%;
+			width: 47%;
+			max-width: none;
 			padding-left: 0;
 			padding-right: 0;
 			margin-left: 6%;
@@ -28,27 +29,22 @@
 		&.alignleft {
 			margin-left: 0;
 			text-align: right;
-
-			@include media( map_get( $breakpoint, 'xxl' ) ) {
-				margin-left: percentage( -$golden_minor / 4 );
-			}
-
 		}
 
 		&.alignright {
 			margin-right: 0;
 			text-align: left;
-
-			@include media( map_get( $breakpoint, 'xxl' ) ) {
-				margin-right: percentage( -$golden_minor / 4 );
-			}
-
 		}
 
 	}
 
-	.wp-block-pullquote {
+	.wp-block-pullquote,
+	blockquote.alignleft,
+	blockquote.alignright {
 		@extend %pullquote;
+	}
+
+	.wp-block-pullquote {
 
 		&,
 		&.alignleft,
