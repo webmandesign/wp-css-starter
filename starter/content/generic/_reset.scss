@@ -1,4 +1,4 @@
-/* FILE: starter/generic/_reset.scss */
+/* FILE: starter/content/generic/_reset.scss */
 
 html {
 	box-sizing: border-box;
@@ -29,8 +29,8 @@ html {
 	*,
 	*::before,
 	*::after {
-		animation-duration: 0.001ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.001ms !important;
+		animation-duration: 0.001ms $important;
+		animation-iteration-count: 1 $important;
+		transition-duration: 0.001ms $important;
 	}
 }

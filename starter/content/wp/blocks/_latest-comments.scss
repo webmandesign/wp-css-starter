@@ -1,4 +1,4 @@
-/* FILE: starter/wp/blocks/_latest-comments.scss */
+/* FILE: starter/content/wp/blocks/_latest-comments.scss */
 
 @if ( index( $support__block, 'latest-comments' ) ) {
 
@@ -7,6 +7,18 @@
 
 		&__comment {
 			@extend %block_list_items_child;
+
+			&-excerpt {
+				@extend %font_size_small;
+
+				p {
+					margin: 1em 0 0;
+					font-size: 1em;
+					line-height: inherit;
+				}
+
+			}
+
 		}
 
 	}

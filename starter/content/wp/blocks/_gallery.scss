@@ -1,4 +1,4 @@
-/* FILE: starter/wp/blocks/_gallery.scss */
+/* FILE: starter/content/wp/blocks/_gallery.scss */
 
 @if ( index( $support__block, 'gallery' ) ) {
 
@@ -7,8 +7,9 @@
 		margin-right: 0;
 
 		&.alignleft,
+		&.aligncenter,
 		&.alignright {
-			max-width: $horizontal_alignment_width;
+			max-width: $alignment_width;
 		}
 
 	}

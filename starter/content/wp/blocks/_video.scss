@@ -1,4 +1,4 @@
-/* FILE: starter/wp/blocks/_video.scss */
+/* FILE: starter/content/wp/blocks/_video.scss */
 
 @if ( index( $support__block, 'video' ) ) {
 
@@ -7,7 +7,7 @@
 		&.alignleft,
 		&.aligncenter,
 		&.alignright {
-			max-width: $horizontal_alignment_width;
+			max-width: $alignment_width;
 		}
 
 	}

@@ -13,6 +13,52 @@
 
 
 //
+// Global variables
+//
+
+	// Responsive breakpoints (in px).
+
+		$breakpoint: (
+			's'     :  448, // =  28em // Starting mobile landscape
+			'm'     :  672, // =  42em // Starting tablet portrait
+			'l'     :  880, // =  55em // Starting tablet landscape
+			'xl'    : 1280, // =  80em // Starting laptop
+			'xxl'   : 1600, // = 100em // Starting desktop
+			'xxxl'  : 1920, // = 120em // Starting desktop full HD
+			'xxxxl' : 2560, // = 160em // Starting desktop WQHD
+		) !default;
+
+	// Golden ratio.
+
+		$golden:       1.618 !default;
+		$golden_major: 0.618 !default;
+		$golden_minor: 0.382 !default;
+
+	// Specificity
+
+		// Wrappers
+
+			// Global wrapper.
+			$wrapper: '.site' !default;
+
+			// Section related wrappers:
+			$wrapper_modifiers: $wrapper !default;
+
+		// Forced important
+
+			// Global important. Should be kept unchanged.
+			$important: !important !default;
+
+			// Section related importants:
+			$important_base_accessibility: $important !default;
+			$important_base_modifiers: null !default;
+			$important_plugins_jetpack_infinite_scroll: $important !default;
+			$important_plugins_jetpack_sharing: $important !default;
+			$important_wp_embed: $important !default;
+
+
+
+//
 // Setup variables
 //
 
@@ -47,6 +93,7 @@
 			'drop-cap',
 			'embed',
 			'gallery',
+			'image',
 			'latest-comments',
 			'latest-posts',
 			'pullquote',
@@ -57,6 +104,9 @@
 			'verse',
 			'video',
 		) !default;
+
+		$alignment_margin: percentage( .06 ) !default;
+		$alignment_width: percentage( $golden_major - .06 ) !default;
 
 	// Post Formats support.
 
@@ -73,6 +123,7 @@
 	// @link  https://jetpack.com/support/control-jetpacks-modules-on-one-page/
 
 		$support__jetpack: (
+			'blocks',
 			'contact-form',
 			'infinite-scroll',
 			'related-posts',
@@ -81,30 +132,6 @@
 			'tiled-gallery',
 			'widgets',
 		) !default;
-
-
-
-//
-// Global variables
-//
-
-	// Responsive breakpoints (in px).
-
-		$breakpoint: (
-			's'     :  448, // =  28em // Starting mobile landscape
-			'm'     :  672, // =  42em // Starting tablet portrait
-			'l'     :  880, // =  55em // Starting tablet landscape
-			'xl'    : 1280, // =  80em // Starting laptop
-			'xxl'   : 1600, // = 100em // Starting desktop
-			'xxxl'  : 1920, // = 120em // Starting desktop full HD
-			'xxxxl' : 2560, // = 160em // Starting desktop WQHD
-		) !default;
-
-	// Golden ratio.
-
-		$golden:       1.618 !default;
-		$golden_major: 0.618 !default;
-		$golden_minor: 0.382 !default;
 
 
 
